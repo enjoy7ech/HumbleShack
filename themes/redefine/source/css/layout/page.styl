@@ -1,0 +1,185 @@
+.page-container {
+  position relative
+  box-sizing border-box
+  width 100%
+  height auto
+  background var(--background-color)
+  //padding-left 230px
+
+
+  +redefine-tablet() {
+    padding-right 0 !important
+  }
+
+
+  .page-main-content {
+    padding-top $menu-height
+    position relative
+    
+
+    .menu-shrink & {
+      padding-top $menu-shrink-height
+
+
+      +redefine-tablet() {
+        padding-top $menu-shrink-height * 0.9
+      }
+
+      +redefine-mobile() {
+        padding-top $menu-shrink-height * 0.8
+      }
+    }
+
+
+    +redefine-tablet() {
+      padding-top $menu-height * 0.9
+    }
+
+
+    +redefine-mobile() {
+      padding-top $menu-height * 0.8
+    }
+
+
+    .page-main-content-top {
+      position fixed
+      top 0
+      right 0
+      width 100%
+      height $menu-height
+      z-index $z-index-5
+      box-sizing border-box
+      transition-t("transform, padding-left, height", "0, 0, 0", "0.3, 0.2, 0.2", "ease-out, linear, ease")
+
+      &.hide {
+        transform translateY(-105%)
+      }
+
+      .menu-shrink & {
+        height $menu-shrink-height
+
+        +redefine-tablet() {
+          height $menu-shrink-height * 0.9
+        }
+
+        +redefine-mobile() {
+          height $menu-shrink-height * 0.8
+        }
+      }
+
+
+      +redefine-tablet() {
+        height $menu-height * 0.9
+        padding-left 0 !important
+      }
+
+
+      +redefine-mobile() {
+        height $menu-height  * 0.8
+      }
+
+    }
+
+
+    .page-main-content-middle {
+      box-sizing border-box
+      width 100%
+      display flex
+      justify-content center
+      padding $spacing-unit 0
+
+      +redefine-tablet() {
+        padding $spacing-unit * 0.8 0
+        box-shadow none !important
+
+        :hover {
+          box-shadow none !important
+        }
+      }
+
+      +redefine-mobile() {
+        
+        box-shadow none !important
+        border none !important
+
+        :hover {
+          box-shadow none !important
+        }
+      }
+
+      .main-content {
+        position relative
+        box-sizing border-box
+        width $main-content-width
+        max-width $content-max-width 
+        height 100%
+        transition-t("max-width, width", "0, 0", "0.2, 0.2", "ease-in, ease-out")
+
+        +redefine-tablet() {
+          width $main-content-width-tablet
+        }
+
+        +redefine-mobile() {
+          width $main-content-width-mobile
+        }
+
+        &.has-toc{
+          max-width $has-toc-content-max-width !important
+        }
+      }
+
+      .page-main-content-bottom {
+        width 100%
+      }
+    }
+  }
+
+
+  .post-tools {
+    position fixed
+    top $menu-height + $spacing-unit
+    right $spacing-unit
+    transition-t("top", "0", "0.2", "ease")
+
+    .menu-shrink & {
+      top $menu-shrink-height + $spacing-unit
+
+      +redefine-tablet() {
+        top $menu-shrink-height * 0.9 + $spacing-unit
+      }
+
+      +redefine-mobile() {
+        top $menu-shrink-height * 0.8 + $spacing-unit
+      }
+    }
+
+
+    +redefine-tablet() {
+      top $menu-height * 0.9 + $spacing-unit
+      right 10px
+      transform scale(0.82)
+      transform-origin right top
+    }
+
+
+    +redefine-mobile() {
+      top $menu-height * 0.8 + $spacing-unit
+      right 5px
+      transform scale(0.72)
+    }
+  }
+
+
+  .right-bottom-side-tools {
+    position fixed
+    bottom 5%
+    right $spacing-unit
+    opacity 1
+    transition opacity 0.2s ease
+
+    &.hide {
+      opacity 0
+      transition opacity 0.2s ease
+    }
+  }
+}

@@ -1,0 +1,77 @@
+<%- partial('_partials/tools/progress-bar') %>
+<main class="page-container">
+
+    <% if (theme.style.first_screen.enable === true && is_home() && !page.prev) { %>
+        <%- partial('_partials/components/first-screen') %>
+    <% } %>
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <%- partial('_partials/menu') %>
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                <% if (is_home()) { %>
+                    <%- partial('home-content') %>
+
+                <% } else if (is_archive()) { %>
+                    <%- partial('archive-content') %>
+
+                <% } else if (is_post()) { %>
+                    <%- partial('article-content') %>
+
+                <% } else if (is_category()) { %>
+                    <%- partial('category-content') %>
+
+                <% } else if (is_tag()) { %>
+                    <%- partial('tag-content') %>
+
+                <% } else if (page.title === 'category' || page.title === 'categories') { %>
+                    <%- partial('category-list') %>
+
+                <% } else if (page.title === 'tag' || page.title === 'tags') { %>
+                    <%- partial('_partials/tools/tagcloud') %>
+
+                <% } else if (page.title === 'Page Not Found' || page.title === 'tags') { %>
+                    <%- partial('_partials/components/404-template') %>
+
+                <% } else { %>
+                    <%- partial('_partials/page-template') %>
+
+                <% } %>
+
+            </div>
+
+
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <%- partial('_partials/footer') %>
+        </div>
+    </div>
+
+    <% if (is_post()) { %>
+        <div class="post-tools">
+            <%- partial('_partials/tools/post-tools') %>
+        </div>
+    <% } %>
+
+    <div class="right-bottom-side-tools">
+        <%- partial('_partials/tools/side-tools') %>
+    </div>
+
+    <%- partial('_partials/tools/image-viewer') %>
+
+    <% if (theme.local_search.enable) { %>
+        <%- partial('_partials/tools/local-search') %>
+    <% } %>
+
+
+</main>
+
+
