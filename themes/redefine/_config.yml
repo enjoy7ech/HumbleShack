@@ -208,7 +208,7 @@ comment:
   # Gitalk
   # See: https://github.com/gitalk/gitalk
   gitalk:
-    github_id: enjon7ech # GitHub repo owner
+    github_id: enjoy7ech # GitHub repo owner
     repository: HumbleShack # Repository name to store issues
     client_id: 1f66ff3b3a8517bb1525 # GitHub Application Client ID
     client_secret: e4eedb6c98a85f5126ad6c2eef99c6693d7ce2fc # GitHub Application Client Secret
