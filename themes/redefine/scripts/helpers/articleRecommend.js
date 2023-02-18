@@ -54,7 +54,7 @@ function 数据清洗(数据) {
 }
 
 function 分词(数据) {
-  const 结巴 = require("nodejieba");
+  const 结巴 = require("@node-rs/jieba");
   return 结巴.cut(数据清洗(数据), true).filter(词 => 词 !== " " && !/^[0-9]*$/.test(词))
 }
 
