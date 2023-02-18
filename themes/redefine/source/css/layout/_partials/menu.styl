@@ -33,8 +33,12 @@ $logo-image-box-width = 46px
 
     &.has-first-screen {
       max-width $content-max-width * 1.2
-      * {
+      *:not(.sub-menu) {
         color #fff!important
+      }
+
+      .sub-menu a {
+        color var(--first-text-color)!important
       }
     }
 
@@ -197,7 +201,7 @@ $logo-image-box-width = 46px
             }
 
             .sub-menu{
-              position absolute;
+              position absolute
               right auto
               left 50%
               -webkit-transform translate(-50%, 0)
