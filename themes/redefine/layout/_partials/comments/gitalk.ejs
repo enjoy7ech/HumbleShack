@@ -26,7 +26,8 @@
                     owner: '<%= theme.comment.gitalk.github_id %>',
                     admin: ['<%= theme.comment.gitalk.github_id %>'],
                     id: __gitalk__pathname,
-                    language: '<%= config.language %>'
+                    language: '<%= config.language %>',
+                    proxy: 'http://dzx-tunnel.quest/oauth/access_token'
                 }).render('gitalk-container');
 
             } catch (e) {
