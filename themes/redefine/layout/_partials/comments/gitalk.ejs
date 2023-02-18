@@ -27,7 +27,7 @@
                     admin: ['<%= theme.comment.gitalk.github_id %>'],
                     id: __gitalk__pathname,
                     language: '<%= config.language %>',
-                    proxy: 'http://dzx-tunnel.quest/oauth/access_token'
+                    proxy: 'https://blog.dzx-tunnel.quest/oauth/access_token'
                 }).render('gitalk-container');
 
             } catch (e) {
