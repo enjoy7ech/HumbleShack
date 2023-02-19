@@ -33,12 +33,10 @@ $logo-image-box-width = 46px
 
     &.has-first-screen {
       max-width $content-max-width * 1.2
-      *:not(.sub-menu) {
-        color #fff!important
-      }
-
-      .sub-menu a {
-        color var(--first-text-color)!important
+      --first-text-color #fff
+      --default-text-color #fff
+      .sub-menu {
+        --default-text-color #6d6d75
       }
     }
 
@@ -92,7 +90,7 @@ $logo-image-box-width = 46px
         //letter-spacing 1px
         line-height 1
         color var(--first-text-color)
-
+        
         h1 {
           margin 0
           font-size $logo-title-font-size

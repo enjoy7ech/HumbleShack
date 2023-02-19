@@ -86,6 +86,12 @@ menu: #you can customize, i18n files are in the theme's languages folder. fa-reg
   Archives: 
     path: /archives 
     icon: fa-regular fa-archive # can be empty
+  Tags: 
+    path: /tags 
+    icon: fa-regular fa-tags # can be empty
+  Categories: 
+    path: /categories 
+    icon: fa-regular fa-books # can be empty
   # Status: 
   #   path: https://status.evanluo.top/
   #   icon: fa-regular fa-chart-bar
