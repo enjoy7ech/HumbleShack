@@ -1,5 +1,5 @@
 git pull
 
-rm -rf public
+hexo clean
 
 yarn build
