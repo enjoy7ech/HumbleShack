@@ -1,5 +1,5 @@
 git pull
 
-hexo clean
+npx hexo clean
 
 yarn build
