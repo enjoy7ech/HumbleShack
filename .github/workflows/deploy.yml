@@ -1,6 +1,9 @@
 name: deploy this blog
 run-name: ${{ github.actor }} is deploying 🚀
-on: [tag]
+on:
+  push:
+    tags:
+      - v*
 jobs:
   pull-latest:
     runs-on: self-hosted
