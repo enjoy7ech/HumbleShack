@@ -173,7 +173,7 @@ jobs:
         shell: bash
 ```
 
-配置完push代码，本地修改完直接打个tag，推到github触发workflow。<span class="shy-block">兴奋的抓手手👏👏</span>
+配置完push代码，本地修改完直接打个tag，推到github触发workflow。<span class="shy-block">兴奋的抓手手</span>
 
 ``` bash
 git tag v1.0.0 && git push origin v1.0.0

@@ -15,7 +15,7 @@ style:
   # Theme primary color
   primary_color: "#1492ff"
 
-  video_url: /media/miku.webm
+  video_url: /media/miku.mp4
 
   # Avatar (You can use local image or image external link)
   avatar: /images/dibujo.svg # avatar of the author
