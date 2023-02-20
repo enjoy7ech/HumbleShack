@@ -159,18 +159,17 @@ on:
 jobs:
   pull-latest:
     runs-on: self-hosted
+    defaults:
+      run:
+        working-directory: /root/github/HumbleShack
     steps:
       - name: Check out repository code # 我的项目已经在runner上提前clone好了
-        run: cd /root/github/HumbleShack && git pull
-        shell: bash
-  deploy:
-    runs-on: self-hosted
-    steps:
+        run: git pull
       - name: Install dependencies # 安装依赖
-        run: cd /root/github/HumbleShack && yarn
+        run: yarn
         shell: bash
       - name: rebuild all static resource # 重新build静态资源，供nginx使用
-        run: cd /root/github/HumbleShack && npx hexo clean && yarn build
+        run: npx hexo clean && yarn build
         shell: bash
 ```
 
