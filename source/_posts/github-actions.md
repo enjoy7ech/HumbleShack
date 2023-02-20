@@ -141,7 +141,10 @@ Feb 20 15:03:36 fine-idea-1.localdomain bash[13705]: √ Connected to GitHub
 ``` yml
 name: deploy this blog
 run-name: ${{ github.actor }} is deploying 🚀
-on: [tag] #在打tag的时候触发
+on:
+  push:
+    tags:
+      - v* #在打tag的时候触发
 jobs:
   pull-latest:
     runs-on: self-hosted #在我们刚刚配置的runner上执行
