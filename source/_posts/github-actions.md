@@ -17,7 +17,7 @@ excerpt: 脚本部署太麻烦？试试github actions，免费的自动化流程
             <img src="/images/dibujo.svg" alt="" />
         </div>
         <div class="message">
-            <pre class="bubble-box">详细介绍下github actions</pre>
+            <div class="bubble-box">详细介绍下github actions</div>
         </div>
     </div>
     <div class="bubble-container you">
@@ -25,7 +25,7 @@ excerpt: 脚本部署太麻烦？试试github actions，免费的自动化流程
             <img src="/images/chatgpt.svg" alt="" />
         </div>
         <div class="message">
-            <pre class="bubble-box">
+            <div class="bubble-box">
 GitHub Actions 是 GitHub 提供的一项持续集成/持续部署（CI/CD）服务，可让开发者自动化软件工作流程。通过在存储库中编写和组织一系列任务（例如编译代码、运行测试、构建应用程序、部署到服务器等），GitHub Actions 可以在存储库发生特定事件时（例如推送代码、创建拉取请求、发布新版本等）自动执行这些任务，以加快开发者的开发流程。
 以下是一些 GitHub Actions 的特点和优点：
 
@@ -36,7 +36,7 @@ GitHub Actions 是 GitHub 提供的一项持续集成/持续部署（CI/CD）服
 · 可以使用预定义的操作，例如构建、测试、部署等，也可以编写自定义的操作。
 · 提供了丰富的日志和报告，以方便开发者监控任务执行情况。
 
-使用 GitHub Actions，开发者可以通过自动化流程，快速、高效地构建、测试和部署应用程序，从而提高开发效率和质量。</pre>
+使用 GitHub Actions，开发者可以通过自动化流程，快速、高效地构建、测试和部署应用程序，从而提高开发效率和质量。</div>
         </div>
     </div>
 </div>
