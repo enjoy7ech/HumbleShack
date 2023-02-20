@@ -157,7 +157,7 @@ on:
     tags:
       - v* # push v开头的 tag触发workflow
 jobs:
-  pull-latest:
+  deploy:
     runs-on: self-hosted
     defaults:
       run:
