@@ -41,7 +41,6 @@ GitHub Actions 是 GitHub 提供的一项持续集成/持续部署（CI/CD）服
     </div>
 </div>
 
-
 好，鼓掌👏👏👏。下面还是实战记录讲解下配置流程。
 
 ## Task: 自动化blog部署
@@ -66,8 +65,10 @@ tar xzf ./actions-runner-linux-x64-2.301.1.tar.gz
 # 配置token，这一步可能会出现Must not run with sudo的报错，就是不让你使用root用户执行（安全考虑）。可以在前面加个RUNNER_ALLOW_RUNASROOT="1"，如下
 RUNNER_ALLOW_RUNASROOT="1"  ./config.sh --url {替换你的url} --token {替换你的token}
 ```
+
 如果上一步出现了什么missing依赖的执行sudo ./bin/installdependencies.sh，具体的报错里会有提示<span class="shy-block">什么叫专业，看看人家做的脚本多么银杏</span>。执行完显示
-```
+
+``` bash
 --------------------------------------------------------------------------------
 |        ____ _ _   _   _       _          _        _   _                      |
 |       / ___(_) |_| | | |_   _| |__      / \   ___| |_(_) ___  _ __  ___      |
@@ -79,9 +80,10 @@ RUNNER_ALLOW_RUNASROOT="1"  ./config.sh --url {替换你的url} --token {替换�
 |                                                                              |
 --------------------------------------------------------------------------------
 ```
-之后是配置runner的信息，一路回车到结束。刷新下github的runner页面，这时已经能看到刚刚添加的runner了。
 
+之后是配置runner的信息，一路回车到结束。刷新下github的runner页面，这时已经能看到刚刚添加的runner了。
 最后一步让你./run.sh，这肯定不行啊。<span class="shy-block">艹，上面做的那么好，最后拉了裤</span>以linux为例，写个守护进程
+
 ``` bash
 vi /etc/systemd/system/actions-runner.service
 # 把下面的粘贴进去，需要学习systemd.service的，可以看这个http://www.jinbuguo.com/systemd/systemd.service.html
@@ -104,19 +106,27 @@ ExecStart=/bin/bash /root/github/actions-runner/run.sh
 # 当系统以多用户方式启动时，这个服务需要被自动运行
 WantedBy=multi-user.target
 ```
+
 保存service后，添加到开机启动
+
 ``` bash
 systemctl enable actions-runner.service
 ```
+
 启动
+
 ``` bash
 systemctl start actions-runner.service
 ```
+
 查看状态
+
 ``` bash
 systemctl status actions-runner.service
 ```
+
 看到active是running就搞定了
+
 ``` bash
 ● actions-runner.service - actions-runner
    Loaded: loaded (/etc/systemd/system/actions-runner.service; disabled; vendor preset: disabled)
@@ -132,6 +142,7 @@ systemctl status actions-runner.service
 Feb 20 15:03:34 fine-idea-1.localdomain systemd[1]: Started actions-runner.
 Feb 20 15:03:36 fine-idea-1.localdomain bash[13705]: √ Connected to GitHub
 ```
+
 ### 2. wrokflow编写
 
 刚刚配置完，刷新下github的runner页面，可见服务器的状态变成Idle了。下面就开始搞workflow，可以在github上查看[具体参数](https://docs.github.com/zh/actions/learn-github-actions/understanding-github-actions)。
@@ -144,7 +155,7 @@ run-name: ${{ github.actor }} is deploying 🚀
 on:
   push:
     tags:
-      - v* # push tag触发workflow
+      - v* # push v开头的 tag触发workflow
 jobs:
   pull-latest:
     runs-on: self-hosted
@@ -156,9 +167,19 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Install dependencies # 安装依赖
-        run: yarn
+        run: cd /root/github/HumbleShack && yarn
         shell: bash
       - name: rebuild all static resource # 重新build静态资源，供nginx使用
-        run: npx hexo clean && yarn build
+        run: cd /root/github/HumbleShack && npx hexo clean && yarn build
         shell: bash
 ```
+
+配置完push代码，本地修改完直接打个tag，推到github触发workflow。<span class="shy-block">兴奋的抓手手👏👏</span>
+
+``` bash
+git tag v1.0.0 && git push origin v1.0.0
+```
+
+到actions页面也是能看到执行日志，大功告成。
+
+![deploy](/assets/github-actions/deploy.png)
