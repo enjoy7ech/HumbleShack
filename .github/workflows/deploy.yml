@@ -15,8 +15,8 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Install dependencies # 安装依赖
-        run: yarn
+        run: cd /root/github/HumbleShack && yarn
         shell: bash
       - name: rebuild all static resource # 重新build静态资源，供nginx使用
-        run: npx hexo clean && yarn build
+        run: cd /root/github/HumbleShack && npx hexo clean && yarn build
         shell: bash
