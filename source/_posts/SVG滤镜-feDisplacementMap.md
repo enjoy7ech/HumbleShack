@@ -11,7 +11,21 @@ excerpt: 用feDisplacementMap实现菈妮的动效海报，谁会不喜欢会动
 ## Task：用feDisplacementMap实现ranni的动效海报
 
 开始撸代码之前，先介绍下feDisplacementMap滤镜。
-{% blockquote Generate by https://chat.openai.com chatGpt %}
+<div class="message-container">
+    <div class="bubble-container me">
+        <div class="avatar">
+            <img src="/images/dibujo.svg" alt="" />
+        </div>
+        <div class="message">
+            <div class="bubble-box">介绍下feDisplacementMap滤镜</div>
+        </div>
+    </div>
+    <div class="bubble-container you">
+        <div class="avatar">
+            <img src="/images/chatgpt.svg" alt="" />
+        </div>
+        <div class="message">
+            <div class="bubble-box">
 feDisplacementMap 是 SVG 的一个滤镜特效，它能够通过图像的亮度值或者颜色值来改变另一张图像的形状。该特效可以用来创建各种视觉效果，比如水波纹、地形图等。
 
 feDisplacementMap 需要两张图像，一张是源图像，另一张是用于扭曲源图像的位移图像。位移图像的每个像素值都会被用于改变源图像的每个像素位置。feDisplacementMap 会根据位移图像中的像素值，将源图像中的像素水平或垂直地扭曲。
@@ -19,7 +33,6 @@ feDisplacementMap 需要两张图像，一张是源图像，另一张是用于�
 feDisplacementMap 可以使用 in 属性来指定源图像输入和 in2 属性来指定位移图像输入。它还可以使用 scale 属性来指定位移图像的缩放比例。 xChannelSelector 和 yChannelSelector 属性用于指定位移图像中哪些颜色通道应该用于水平和垂直位移。xChannelSelector 和 yChannelSelector 可以使用以下属性值之一：R（红色通道）、G（绿色通道）、B（蓝色通道）或 A（透明通道）。
 
 feDisplacementMap对图形进行位置计算有一个映射公式。
-
 公式如下（摘自MDN文档）：
 ```
 P'(x,y) ← P( x + scale * (XC(x,y) - 0.5), y + scale * (YC(x,y) - 0.5))
@@ -45,7 +58,10 @@ P'(x,y) ← P( x + scale * (XC(x,y) - 0.5), y + scale * (YC(x,y) - 0.5))
 在上面的示例中，feTurbulence 用于创建一张噪声图像，它作为位移图像传递给了 feDisplacementMap。 scale 属性设置为 20，表示扭曲的强度，而 xChannelSelector 和 yChannelSelector 属性则分别设置为 R 和 G，表示使用位移图像的红色和绿色通道进行水平和垂直位移。最后，我们将 filter 应用于一个圆形，以展示 feDisplacementMap 的效果。
 
 总体来说，feDisplacementMap 是一个非常有用的 SVG 滤镜特效，它可以创建各种视觉效果，如水波纹、地形图等。它需要使用两张图像，其中一张作为源图像，另一张作为位移图像，用于扭曲源图像的形状。通过调整不同的属性，可以实现不同的扭曲效果。
-{% endblockquote %}
+            </div>
+        </div>
+    </div>
+</div>
 
 扣完素材，开始实战，顺便讲解一下这个滤镜的计算逻辑。
 ### 1. 先实现眨眼
