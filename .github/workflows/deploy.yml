@@ -8,18 +8,18 @@ jobs:
   pull-latest:
     runs-on: self-hosted
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Check out repository code
-      - run: cd /root/github/HumbleShack
-      - run: git pull
+          run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+          run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+          run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+          run: cd /root/github/HumbleShack
+          run: git pull
   deploy:
     runs-on: self-hosted
     steps:
       - name: Install dependencies
-      - run: yarn
+          run: yarn
       - name: rebuild all static resource
-      - run: npx hexo clean
-      - run: yarn build
+          run: npx hexo clean
+          run: yarn build
 

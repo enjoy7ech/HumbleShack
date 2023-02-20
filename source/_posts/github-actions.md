@@ -149,18 +149,18 @@ jobs:
   pull-latest:
     runs-on: self-hosted #在我们刚刚配置的runner上执行
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
-      - run: cd /root/github/HumbleShack #我的项目已经提前clone好了，直接进去拉代码
-      - run: git pull
+        - name: Check out repository code #我的项目已经提前clone好了，直接进去拉代码
+          run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+          run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+          run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+          run: cd /root/github/HumbleShack
+          run: git pull
   deploy:
     runs-on: self-hosted
     steps:
-      - name: Install dependencies
-      - run: yarn #安装依赖
-      - name: rebuild all static resource
-      - run: npx hexo clean
-      - run: yarn build #打包静态资源，供nginx读取
+        - name: Install dependencies #安装依赖
+          run: yarn
+        - name: rebuild all static resource #打包静态资源，供nginx读取
+          run: npx hexo clean
+          run: yarn build
 ```
