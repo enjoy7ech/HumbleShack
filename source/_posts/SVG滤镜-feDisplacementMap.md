@@ -11,7 +11,7 @@ excerpt: 用feDisplacementMap实现菈妮的动效海报，谁会不喜欢会动
 ## Task：用feDisplacementMap实现ranni的动效海报
 
 开始撸代码之前，先介绍下feDisplacementMap滤镜。
-{% notel success 'Generate by chatGpt' %}
+{% blockquote Generate by https://chat.openai.com chatGpt %}
 feDisplacementMap 是 SVG 的一个滤镜特效，它能够通过图像的亮度值或者颜色值来改变另一张图像的形状。该特效可以用来创建各种视觉效果，比如水波纹、地形图等。
 
 feDisplacementMap 需要两张图像，一张是源图像，另一张是用于扭曲源图像的位移图像。位移图像的每个像素值都会被用于改变源图像的每个像素位置。feDisplacementMap 会根据位移图像中的像素值，将源图像中的像素水平或垂直地扭曲。
@@ -45,7 +45,7 @@ P'(x,y) ← P( x + scale * (XC(x,y) - 0.5), y + scale * (YC(x,y) - 0.5))
 在上面的示例中，feTurbulence 用于创建一张噪声图像，它作为位移图像传递给了 feDisplacementMap。 scale 属性设置为 20，表示扭曲的强度，而 xChannelSelector 和 yChannelSelector 属性则分别设置为 R 和 G，表示使用位移图像的红色和绿色通道进行水平和垂直位移。最后，我们将 filter 应用于一个圆形，以展示 feDisplacementMap 的效果。
 
 总体来说，feDisplacementMap 是一个非常有用的 SVG 滤镜特效，它可以创建各种视觉效果，如水波纹、地形图等。它需要使用两张图像，其中一张作为源图像，另一张作为位移图像，用于扭曲源图像的形状。通过调整不同的属性，可以实现不同的扭曲效果。
-{% endnotel %}
+{% endblockquote %}
 
 扣完素材，开始实战，顺便讲解一下这个滤镜的计算逻辑。
 ### 1. 先实现眨眼
