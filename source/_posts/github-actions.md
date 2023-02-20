@@ -144,23 +144,21 @@ run-name: ${{ github.actor }} is deploying 🚀
 on:
   push:
     tags:
-      - v* #在打tag的时候触发
+      - v* # push tag触发workflow
 jobs:
   pull-latest:
-    runs-on: self-hosted #在我们刚刚配置的runner上执行
+    runs-on: self-hosted
     steps:
-        - name: Check out repository code #我的项目已经提前clone好了，直接进去拉代码
-          run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-          run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-          run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-          run: cd /root/github/HumbleShack
-          run: git pull
+      - name: Check out repository code # 我的项目已经在runner上提前clone好了
+        run: cd /root/github/HumbleShack && git pull
+        shell: bash
   deploy:
     runs-on: self-hosted
     steps:
-        - name: Install dependencies #安装依赖
-          run: yarn
-        - name: rebuild all static resource #打包静态资源，供nginx读取
-          run: npx hexo clean
-          run: yarn build
+      - name: Install dependencies # 安装依赖
+        run: yarn
+        shell: bash
+      - name: rebuild all static resource # 重新build静态资源，供nginx使用
+        run: npx hexo clean && yarn build
+        shell: bash
 ```
