@@ -34,7 +34,9 @@ style:
 
   #navigation bar background color (from left to right)
   nav_color: 
-    style: ''
+    left: "" #left side 
+    right: ""  #right side
+    transparency: 35 #percent (10-99)
 
   # Mouse hover
   hover:
@@ -45,15 +47,15 @@ style:
   first_screen:
     enable: true
     background_image:
-      light: # background image of the first screen, use relative path or external link (if your website is in subdirectory, use external link)
-      dark: # background image of the first screen, use relative path or external link (if your website is in subdirectory, use external link)
+      light:  # background image of the first screen, use relative path or external link (if your website is in subdirectory, use external link)
+      dark:  # background image of the first screen, use relative path or external link (if your website is in subdirectory, use external link)
     title_color:
       light: "#fff" # first screen title color (light mode)
       dark: "#fff" # first screen title color (dark mode)
     description: 沉下心深耕每一寸技术 # the title in the middle of the first screen. HTML supported (e.g. svg html code of your logo)
     custom_font: # custom font for the first screen
       enable: true
-      font_family:  # the font family name of the url below
+      font_family: # the font family name of the url below
       font_url:  # The url to the font file
 
   # Scroll style settings
@@ -147,6 +149,10 @@ post:
 code_block:
   copy: true # enable code copy button
   style: mac # mac | simple
+  custom_font: # custom font family, default: Ubuntu Mono
+    enable: false
+    font_family: # font family name
+    font_url: # font url
 
 # ---------------------------------------------------------------------------------------
 # Table of Contents in the Sidebar
@@ -189,14 +195,6 @@ website_count:
 local_search:
   enable: true
   preload: true # Preload the search data when the page loads
-
-# Search
-## See: https://github.com/theme-next/hexo-generator-searchdb
-search:
-  path: search.json
-  field: post
-  content: true
-  format: striptags
 
 # ---------------------------------------------------------------------------------------
 # Comment plugin
@@ -307,4 +305,4 @@ inject:
 # Please go to github to update the latest version frequently
 # Github: https://github.com/EvanNotFound/hexo-theme-redefine
 # ---------------------------------------------------------------------------------------
-version: 1.1.1
+version: 1.1.2
