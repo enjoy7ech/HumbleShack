@@ -1,6 +1,6 @@
-'use strict'
+"use strict";
 hexo.extend.filter.register(
-  'after_post_render',
+  "after_post_render",
   function (data) {
     const theme = hexo.theme.config;
     if (!theme.lazyload || !theme.lazyload.enable) return;
@@ -9,16 +9,21 @@ hexo.extend.filter.register(
       /<img([^>]*)src="([^"]*)"([^>\/]*)\/?\s*>/gim,
       function (match, attrBegin, src, attrEnd) {
         // Exit if the src doesn't exists.
-        if (!src) return match;
+        if (
+          !src ||
+          /disableLazy/.test(attrBegin) ||
+          /disableLazy/.test(attrEnd)
+        )
+          return match;
 
         return `<img ${attrBegin}
                      lazyload
                      src="/images/loading.svg"
                      data-src="${src}"
                      ${attrEnd}
-                >`
-      }
-    )
+                >`;
+      },
+    );
   },
-  1
+  1,
 );
