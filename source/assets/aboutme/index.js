@@ -1,5 +1,6 @@
 var ab = document.querySelector(".aboutme-container");
 var land = document.querySelector(".aboutme-container #land");
+var pole = document.querySelector(".aboutme-container #pole");
 var topCloud1 = document.querySelector(".aboutme-container #top-cloud1");
 var topCloud2 = document.querySelector(".aboutme-container #top-cloud2");
 var cloud1 = document.querySelector(".aboutme-container #cloud1");
@@ -16,7 +17,8 @@ ab.addEventListener("mousemove", (e) => {
   topCloud1.style.transform = getPerspective(0.2);
   topCloud2.style.transform = getPerspective(-0.2);
 
-  land.style.transform = getPerspective(-0.5);
+  pole.style.transform = getPerspective(-0.5);
+  land.style.transform = getPerspective(-2);
   cloud1.style.transform = getPerspective(-0.5);
   leaf1.style.transform = getPerspective(20);
   sf1.style.transform = getPerspective(9);
