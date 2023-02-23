@@ -42,3 +42,22 @@
 <% if (theme.pjax.enable === true) { %>
     <%- partial('pjax') %>
 <% } %>
+
+<script src="/lib/sakana/sakana.min.js"></script>
+<script data-pjax>
+if(Sakana){
+    Sakana.setMute(true);
+    Sakana.init({
+        el: '.footer>.sakana-container>.content>.takina',
+        scale: .3,
+        character:'takina',
+        canSwitchCharacter: false
+    });
+    Sakana.init({
+        el: '.footer>.sakana-container>.content>.chisato',
+        scale: .3,
+        character: 'chisato',
+        canSwitchCharacter: false
+    });
+}
+</script>
