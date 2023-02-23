@@ -14,7 +14,7 @@ excerpt: 用feDisplacementMap实现菈妮的动效海报，谁会不喜欢会动
 <div class="message-container">
     <div class="bubble-container me">
         <div class="avatar">
-            <img src="/images/dibujo.svg" alt="" />
+            <img src="/images/avatar.svg" alt="" />
         </div>
         <div class="message">
             <div class="bubble-box">介绍下feDisplacementMap滤镜</div>

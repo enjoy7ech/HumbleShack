@@ -22,8 +22,8 @@ hexo.extend.filter.register(
                      data-src="${src}"
                      ${attrEnd}
                 >`;
-      },
+      }
     );
   },
-  1,
+  1
 );
