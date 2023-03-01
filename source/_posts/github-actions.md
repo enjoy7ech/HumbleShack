@@ -1,10 +1,14 @@
 ---
-title: 自动化方案之Github Action
+title: 自动化方案之Github Actions
 date: 2023-02-20 11:14:36
 tags: 
  - github-actions
 categories: 自动化
+keywords: 自动化,Github Actions
+description: 脚本部署太麻烦？试试github actions，免费的自动化流程部署。
 thumbnail: /assets/github-actions/thumbnail/GitHubActions.png
+top_img: /assets/github-actions/thumbnail/GitHubActions.png
+cover: /assets/github-actions/thumbnail/GitHubActions.png
 excerpt: 脚本部署太麻烦？试试github actions，免费的自动化流程部署。
 ---
 撸了一天blog，有点嫌弃这个部署效率，都3202年了，居然还要我去服务器上运行个部署脚本，自动化搞上 <span class="shy-block">顺便让我水一篇</span>
@@ -49,7 +53,7 @@ GitHub Actions 是 GitHub 提供的一项持续集成/持续部署（CI/CD）服
 
 github会提供机器用于actions，但是需要[收费](https://docs.github.com/zh/billing/managing-billing-for-github-actions/about-billing-for-github-actions)，而且咱的静态资源在服务器上，图方便肯定是在服务器上打包，对于自托管的运行器，gitHub[有相应的说明](https://docs.github.com/zh/actions/hosting-your-own-runners/about-self-hosted-runners)。比如自托管运行器与 GitHub Actions 未连接超过 14 天，将被自动从 GitHub 中删除等等的一些规范。
 
-### 1. 添加自托管的运行器到仓库
+### 添加自托管的运行器到仓库
 
 在repo页面，单击 “设置”，左侧栏找到Actions/Runners，根据服务器的类型选下可以看到部署脚本，下面解释脚本的意思，建议不要复制下面的脚本使用，以防脚本更新，主要还是按照github提供的脚本来。
 
@@ -143,7 +147,7 @@ Feb 20 15:03:34 fine-idea-1.localdomain systemd[1]: Started actions-runner.
 Feb 20 15:03:36 fine-idea-1.localdomain bash[13705]: √ Connected to GitHub
 ```
 
-### 2. wrokflow编写
+### wrokflow编写
 
 刚刚配置完，刷新下github的runner页面，可见服务器的状态变成Idle了。下面就开始搞workflow，可以在github上查看[具体参数](https://docs.github.com/zh/actions/learn-github-actions/understanding-github-actions)。
 

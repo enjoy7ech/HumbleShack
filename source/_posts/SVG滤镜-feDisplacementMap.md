@@ -3,7 +3,11 @@ title: SVG滤镜-feDisplacementMap
 date: 2023-02-19 11:14:36
 tags: [前端,SVG]
 categories: 前端
+keywords: SVG滤镜,feDisplacementMap,菈妮
+description: 用feDisplacementMap实现菈妮的动效海报
 thumbnail: /assets/SVG滤镜-feDisplacementMap/thumbnail/ranni.jpg
+top_img: /assets/SVG滤镜-feDisplacementMap/thumbnail/ranni.jpg
+cover: /assets/SVG滤镜-feDisplacementMap/thumbnail/ranni.jpg
 excerpt: 用feDisplacementMap实现菈妮的动效海报，谁会不喜欢会动的老婆呢
 ---
 作为一个爱折腾的前端，看了一堆稀奇古怪的技术，今天就来折腾下svg滤镜比较难理解的feDisplacementMap。当然玩嘛，必须带上俺的老婆-ranni <span class="shy-block">（不知道第几个老婆了）</span>，不多说，开始霍霍。
