@@ -4,11 +4,11 @@
 
 # Site
 title: HUMBLE SHACK
-subtitle: "斯是陋室，惟吾德馨。"
-description: "关注前端，认真生活的精致小生的博客"
-keywords:
+subtitle: 斯是陋室，惟吾德馨。
+description: 关注前端，认真生活的精致小生的博客
+keywords: 博客,blog,前端,HUMBLESHACK
 author: Wings Denzel
-language: en
+language: zh-CN
 timezone: "Asia/Shanghai"
 
 # URL

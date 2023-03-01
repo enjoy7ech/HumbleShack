@@ -33,9 +33,9 @@ style:
   content_max_width: 1000px #content max width, for article
 
   #navigation bar background color (from left to right)
-  nav_color: 
-    left: "" #left side 
-    right: ""  #right side
+  nav_color:
+    left: "" #left side
+    right: "" #right side
     transparency: 35 #percent (10-99)
 
   # Mouse hover
@@ -47,8 +47,8 @@ style:
   first_screen:
     enable: true
     background_image:
-      light:  # background image of the first screen, use relative path or external link (if your website is in subdirectory, use external link)
-      dark:  # background image of the first screen, use relative path or external link (if your website is in subdirectory, use external link)
+      light: # background image of the first screen, use relative path or external link (if your website is in subdirectory, use external link)
+      dark: # background image of the first screen, use relative path or external link (if your website is in subdirectory, use external link)
     title_color:
       light: "#fff" # first screen title color (light mode)
       dark: "#fff" # first screen title color (dark mode)
@@ -56,12 +56,12 @@ style:
     custom_font: # custom font for the first screen
       enable: true
       font_family: # the font family name of the url below
-      font_url:  # The url to the font file
+      font_url: # The url to the font file
 
   # Scroll style settings
   scroll:
     progress_bar: # reading progress bar
-      enable: true 
+      enable: true
     percent: # reading progress percent
       enable: false
 
@@ -69,12 +69,12 @@ style:
 # Social contact link
 # ---------------------------------------------------------------------------------------
 social_contact: # social contact icons in the first screen, you can add more by using fontawesome icon names
-  enable: true 
+  enable: true
   links:
     github: https://github.com/enjoy7ech # your GitHub URL
     instagram: # your Instagram URL
-    zhihu:  # your ZhiHu URL
-    twitter:  # your twitter URL
+    zhihu: # your ZhiHu URL
+    twitter: # your twitter URL
     email: 1248482491@qq.com # your email
     # ...... # you can add more
 
@@ -82,35 +82,33 @@ social_contact: # social contact icons in the first screen, you can add more by 
 # Navigation menu
 # ---------------------------------------------------------------------------------------
 menu: #you can customize, i18n files are in the theme's languages folder. fa-regular recommended
-  Home: 
-    path: / 
+  Home:
+    path: /
     icon: fa-regular fa-house # can be empty
-  Archives: 
-    path: /archives 
+  Archives:
+    path: /archives
     icon: fa-regular fa-archive # can be empty
-  Tags: 
-    path: /tags 
+  Tags:
+    path: /tags
     icon: fa-regular fa-tags # can be empty
-  Categories: 
-    path: /categories 
+  Categories:
+    path: /categories
     icon: fa-regular fa-books # can be empty
-  # Status: 
+  # Status:
   #   path: https://status.evanluo.top/
   #   icon: fa-regular fa-chart-bar
-  Links: 
+  Links:
     icon: fa-regular fa-link
     submenus:
       Github: https://github.com/enjoy7ech
       Redefine: https://ohevan.com/hexo-theme-redefine-intro.html
       # Link3: /link3
       # Friends: /friends
-  AboutMe: 
+  AboutMe:
     icon: fa-regular fa-user
     path: /about
 
   # ...... # you can add more
-
-
 
 # ---------------------------------------------------------------------------------------
 # Home page article block display settings
@@ -173,7 +171,7 @@ toc:
 # Post copyright info
 # ---------------------------------------------------------------------------------------
 copyright_info:
-  enable: true
+  enable: false
 
 # ---------------------------------------------------------------------------------------
 # Website count
@@ -206,9 +204,9 @@ comment:
   # Waline
   # See: https://waline.js.org/guide/get-started.html
   waline:
-    serverUrl:  # Waline server url(vercel) example: https://example.example.com
+    serverUrl: # Waline server url(vercel) example: https://example.example.com
     lang: zh-CN # Waline language, default: zh-CN. See: https://waline.js.org/guide/client/i18n.html
-  
+
   # Gitalk
   # See: https://github.com/gitalk/gitalk
   gitalk:
@@ -264,7 +262,7 @@ recommended_article: # 文章推荐，需要 npm install nodejieba
   title: 推荐阅读
   icon: fa-solid fa-bookmark
   max_count: 3
-  placeholder_img: 
+  placeholder_img:
   # 不展示文章推荐：
   # front-matter 使用 skip_recommended_article: true 关闭
   # 不在以下文件夹文章中展示文章推荐 根目录是source/
@@ -285,7 +283,7 @@ fontawesome: # select fontawesome versions you want to use, in order to reduce t
 footer:
   runtime: false # show website running time or not
   start_time: 2022/8/17 11:45:14 # the starting time of your website, format: yyyy/mm/dd hh:mm:ss
-  customize:  # customize footer message, can be html code
+  customize: # customize footer message, can be html code
   icp: # ICP record number of your website, Can be null
 
 # ---------------------------------------------------------------------------------------
@@ -294,11 +292,11 @@ footer:
 inject:
   enable: false
   head: # inject code into <head> tag
-    - 
-    - 
+    -
+    -
   footer: # inject code into <footer> tag
-    - 
-    - 
+    -
+    -
 
 # ---------------------------------------------------------------------------------------
 # Redefine Theme version (Please dont modify it)

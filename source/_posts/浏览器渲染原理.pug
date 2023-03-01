@@ -1,0 +1,138 @@
+---
+title: 浏览器渲染原理
+keywords: http-equiv
+description: 浏览器渲染原理,浏览器是如何将HTML、CSS和JavaScript代码转换为用户可见的网页
+date: 2023-02-27 10:14:36
+tags: 
+- 浏览器
+categories: 前端
+thumbnail: /assets/浏览器渲染原理/how-browser-rendering-works.png
+excerpt: 当浏览器加载网页时，浏览器是如何将HTML、CSS和JavaScript代码转换为用户可见的网页的呢？
+---
+
+h2(id="概述") 概述
+img(src="/assets/浏览器渲染原理/flow.png")
+p 简单来说，浏览器渲染可以分为DOM树、CSSOM树、渲染树、布局、绘制、合成和显示等过程。
+p HTML解析，生成DOM Tree，解析CSS文件生成CSSOM Tree（这两步多线程并行，这两步之间涉及加载资源或执行JavaScript导致的线程阻塞后面讲解）。
+p 将Dom Tree和CSSOM Tree结合，生成Render Tree(渲染树)，根据Render Tree渲染绘制，将像素渲染到屏幕上。
+h2(id="构建DOM（Document Object Model）") 构建DOM（Document Object Model）
+p 浏览器会将HTML代码解析成DOM（文档对象模型）树。DOM树是表示文档结构的一种树形结构，它由多个节点组成，每个节点代表一个HTML标记。浏览器会根据HTML代码的层次关系，将每个HTML标记转换为DOM节点，并建立它们之间的父子关系。
+h3(id="HTML解析") HTML解析
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 作者：NUMT片段 https://www.bilibili.com/read/cv20748654/ 出处：bilibili
+    </p>
+</body>
+</html>
+```
+p 以一个简单的html片段为例
+p html的解析是从上往下的，一般来说，html的根节点html嵌套了head和body，head在前，body在后。当不遵循这个顺序时解析器也能工作，也是按照从上往下解析。当解析器发现非阻塞资源，例如一张图片，浏览器会请求这些资源并且继续解析。当遇到一个CSS文件时，解析也可以继续进行，但是对于script标签（特别是没有 async 或者 defer 属性的）会阻塞渲染并停止HTML的解析。尽管浏览器的预加载扫描器加速了这个过程，但过多的脚本仍然是一个重要的瓶颈。
+h4(id="预加载扫描器") 预加载扫描器
+p 浏览器构建DOM树时，这个过程占用了主线程。当这种情况发生时，预加载扫描仪将解析可用的内容并请求高优先级资源，如 CSS、JavaScript 和 web 字体。多亏了预加载扫描器，我们不必等到解析器找到对外部资源的引用来请求它。它将在后台检索资源，以便在主 HTML 解析器到达请求的资源时，它们可能已经在运行，或者已经被下载。预加载扫描仪提供的优化减少了阻塞。
+h4(id="DOCTYPE") DOCTYPE
+p 一个标准的html第一行是文档类型声明，#[a(href="https://developer.mozilla.org/zh-CN/docs/Glossary/Doctype") DTD(document type definition)]是一系列的语法规则，用来定义XML或（x)HTML的文件类型。浏览器会使用它来判断文档类型，决定使用何种协议来解析，以及切换浏览器模式。#[span.shy-block 不懂就问]
+.message-container
+    .bubble-container.me
+        .avatar
+            img(src="/images/avatar.svg")
+        .message
+            .bubble-box DOCTYPE
+    .bubble-container.you
+        .avatar
+            img(src="/images/chatgpt.svg")
+        .message
+            .bubble-box.
+                DOCTYPE是Document Type的缩写，即文档类型。在HTML文档中，DOCTYPE用来指定文档的类型，告诉浏览器应该使用哪种HTML规范来解析该文档。
+                在HTML4中，DOCTYPE声明的形式如下：
+                ``` html
+                    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                    "http://www.w3.org/TR/html4/strict.dtd">
+                ```
+                在HTML5中，DOCTYPE声明的形式比较简单，只需使用以下语句：
+                ``` html
+                <!DOCTYPE html>
+                ```
+                DOCTYPE声明应该放在HTML文档的第一行，位于&lt;html&gt;标签之前。如果省略DOCTYPE声明或者声明错误，浏览器将以怪异模式（quirks mode）来解析该文档，这可能会导致一些问题。
+                在怪异模式下，浏览器的解析方式与不同的浏览器不同，会导致页面的呈现出现一些不可预测的问题，例如元素间的间距不一致、文本换行等。因此，为了确保页面的正确呈现，应该始终在HTML文档中声明正确的DOCTYPE。
+h4(id="head") head
+p head中包含一些与文档相关的元数据和资源，这些元数据和资源并不直接显示在页面上，而是提供了一些有用的信息给浏览器和搜索引擎。
+p head标签通常包含以下内容：
+ol
+    li 页面的标题：可以通过title标签来定义页面的标题，该标题通常会显示在浏览器的标签栏中。
+    li 网站图标：可以通过link标签来引用网站的图标，通常是一个小图标，也称为“网站图标”或“favicon”。
+    li 文档的字符编码：可以通过meta标签来定义文档的字符编码(&lt;meta charset="UTF-8"&gt;)，以确保浏览器正确地解析和显示文档中的特殊字符。
+    li 关键词和描述：可以通过meta标签来定义文档的关键词和描述，以便搜索引擎能够更好地索引和分类文档。
+    li 外部资源链接：可以通过link和script标签来引用外部的CSS和JavaScript文件，以改善页面的样式和功能，对于&lt;script&gt;标签（特别是没有 async 或者 defer 属性的）会阻塞渲染并停止HTML的解析。
+    li 其他元数据：还可以通过meta标签定义其他元数据，例如作者、日期、版本号等。其中http-equiv用于模拟HTTP响应头的字段，以便在浏览器中设置某些特定的行为或元数据。如&lt;meta http-equiv="refresh" content="3;Url=网址参数"&gt; refresh代表多少时间网页自动刷新，加上Url中的网址参数就代表，多长时间自动链接其他网址。
+p 在HTML中，head标签是必须的，因为它包含了文档的元数据和资源，这些元数据和资源对于浏览器和搜索引擎来说非常重要。
+h4(id="body") body
+p body中一般用于存放页面的主体，一般涉及交互的script标签会放到body后面，这是由于dom解析是从上到下的，所以解析到body后面时，页面的dom结构已经出来了，再去操作dom不会产生问题。反之，如果放在head里则需要通过事件（onLoad、DOMContentLoaded）去操作dom，会增加事件触发线程的开销。
+h2(id="构建CSSOM（CSS Object Model）") 构建CSSOM（CSS Object Model）
+img(src="/assets/浏览器渲染原理/cssom.png")
+h3(id="构建流程") 构建流程
+ul
+    li 解析CSS文件：浏览器首先会下载CSS文件，并进行解析。解析过程中，浏览器会忽略掉一些无效的CSS语句，如注释、空白等，并将有效的CSS语句解析成CSS规则。
+    li 构建样式表：浏览器将解析后的CSS规则构建成一个样式表对象，并将其保存在内存中。
+    li 构建CSSOM Tree：浏览器遍历DOM Tree，并匹配每个DOM节点所对应的CSS规则，将匹配到的CSS规则构建成CSSOM Tree，并将其与DOM Tree结合起来，形成一个Render Tree。
+h3 匹配细节
+ul 
+    li 合并样式：当一个DOM节点匹配到多个CSS规则时，浏览器会按照一定的优先级规则将这些CSS规则合并成一个最终的样式，例如：内联样式 > ID选择器 > 类选择器 > 标签选择器 > 通配符等。
+    li 计算继承样式：当一个DOM节点没有匹配到任何CSS规则时，浏览器会从它的父节点继承样式，并计算出最终的继承样式。
+    li 计算盒模型：浏览器根据样式规则计算每个DOM节点的盒模型属性，如元素的宽度、高度、边距和内边距等。
+h2(id="构建渲染树（Render Tree）") 构建渲染树（Render Tree）
+img(src="/assets/浏览器渲染原理/render-tree.png")
+p 当DOM和CSSOM都解析完成后，浏览器主线程会将两者结合，生成渲染树。如上图，display：none的节点被过滤掉了。渲染树就是这样只囊括了影响真正渲染结果的节点，保证其高效的渲染效率。
+h2(id="线程配合") 线程协同
+p 了解了渲染的流程后，可以发现浏览器并不是将所有任务全部交给一个线程执行的，以webkit内核为例，浏览器会为每个tab开一个进程，每个进程分很多线程，下面就讲解下线程之间的配合：
+h3(id="浏览器线程简介") 浏览器线程简介
+h4(id="1. 主线程") 1. 主线程
+p 在浏览器中，主线程是所有页面操作的核心线程。主线程主要负责处理页面的渲染、用户交互、JavaScript执行和网络请求等任务。
+p 以下是主线程的主要工作：
+ol
+    li 处理页面的渲染：主线程通过解析HTML和CSS文件，构建DOM Tree和CSSOM Tree，然后将它们合并成Render Tree，最终将Render Tree转化为像素信息，交给GUI渲染线程绘制在屏幕上。
+    li 处理用户交互事件：主线程监听用户的输入事件，如鼠标点击、键盘输入等，将事件封装成事件对象，并将事件对象添加到事件队列中等待处理。当主线程空闲时，会从事件队列中取出事件对象，并触发相应的事件处理函数执行。
+    li 处理JavaScript代码的执行：主线程通过JavaScript引擎解析JavaScript代码，将其转换成可执行的指令序列，并执行这些指令。在执行过程中，主线程会不断地从任务队列中取出任务，执行相应的JavaScript代码。如果JavaScript代码执行时间过长，会导致主线程被阻塞，从而导致页面卡顿和不流畅。
+    li 处理网络请求：主线程通过XMLHttpRequest或Fetch API等技术向服务器发送网络请求，并等待服务器返回响应结果。当服务器返回响应结果后，主线程会将响应结果封装成响应对象，并将响应添加到事件队列中等待处理。
+p 需要注意的是，由于浏览器是单线程的，因此在主线程中执行的任务会互相竞争CPU资源。如果某个任务执行时间过长，会导致其他任务被阻塞，从而导致页面卡顿和不流畅。因此，在编写页面时，需要尽可能地减少主线程的负担，避免长时间的JavaScript代码执行和网络请求等操作，以提高页面的性能和响应速度。可以使用异步编程、Web Worker等技术将一些耗时的操作移动到其他线程中，以减轻主线程的负担。
+h4(id="2. GUI 渲染线程") 2. GUI 渲染线程
+p 在浏览器中，GUI 渲染线程通常是由主线程执行的。GUI 渲染线程负责将 Render Tree 渲染成屏幕上的像素信息，并将其显示出来。渲染过程包括以下几个步骤：
+ol
+    li 布局：根据 Render Tree 中每个节点的尺寸、位置等信息，计算出每个节点在屏幕上的准确位置。
+    li 绘制：将每个节点的背景色、边框、文本、图片等内容绘制到屏幕上。
+    li 合成：将绘制好的层按照正确的顺序进行合成，形成最终的像素信息，并将其显示到屏幕上。
+p 在渲染过程中，GUI 渲染线程需要不断地与主线程进行通信，以获取最新的 Render Tree 和 CSSOM Tree 等信息。由于渲染线程需要频繁地进行绘制操作，因此渲染线程的执行优先级较高，如果主线程中有耗时的操作，会对渲染性能造成影响，从而导致页面的卡顿和不流畅。
+p 为了提高页面的渲染性能，可以采取一些优化策略，如减少DOM节点数量、使用CSS3动画代替JavaScript动画等。同时，也可以通过 Web Worker 等技术将一些计算密集型的操作移动到其他线程中，减轻主线程的负担，从而提高页面的响应速度和性能。
+h4(id="3. JS 引擎线程") 3. JS 引擎线程
+p JS引擎线程是浏览器中用于执行JavaScript代码的线程。JS引擎是浏览器中的核心组件之一，它负责解析、编译和执行JavaScript代码。
+p JS引擎线程和主线程不同，它是独立的线程，拥有自己的执行栈和堆内存，可以并行执行JavaScript代码，不会阻塞主线程的执行。当主线程遇到需要执行JavaScript代码的任务时，会将任务添加到#[strong 任务队列]中，然后等待JS引擎线程的执行。
+p 当JS引擎线程取出任务时，会将任务添加到自己的执行栈中，并执行相应的JavaScript代码。在执行过程中，JS引擎线程会不断地从任务队列中取出任务，执行相应的JavaScript代码，直到执行栈中没有任务为止。
+p 由于JavaScript是单线程的，因此在JS引擎线程中执行的任务也是互相竞争CPU资源的。如果某个任务执行时间过长，会导致其他任务被阻塞，从而影响页面的性能和响应速度。
+h4(id="4. 事件触发线程") 4. 事件触发线程
+p 事件触发线程是由主线程之外的单独线程执行的。事件触发线程负责监听用户的输入事件，如鼠标点击、键盘输入等，并将这些事件封装成事件对象，然后将事件对象添加到事件队列中。当主线程空闲时，会从事件队列中取出事件对象，并触发相应的事件处理函数执行。
+p 事件触发线程与主线程之间通过任务队列来进行通信。事件触发线程将事件对象添加到任务队列中，而主线程则不断地从任务队列中取出事件对象，并执行相应的事件处理函数。如果主线程正在执行其他任务，事件处理函数将会被暂时挂起，直到主线程完成当前任务后再执行。
+p 由于事件触发线程与主线程是分离的，因此在事件处理函数执行期间，页面的其他部分仍然可以响应用户的操作，不会出现页面卡顿或不流畅的现象。
+p 在JavaScript中，事件处理函数的执行是同步的，也就是说，当事件处理函数执行时，JavaScript代码会阻塞，直到事件处理函数执行完成后才继续执行后续的代码。当事件触发时，事件处理线程会将事件加入到事件队列中，然后通知JavaScript引擎线程。JavaScript引擎线程会不断地从事件队列中取出事件并执行相应的回调函数。因此，事件触发线程的回调最终是由JavaScript引擎线程执行的，但是在事件处理线程和JavaScript引擎线程之间有一个事件队列来协调它们的工作。
+h4(id="5. 定时器触发线程") 5. 定时器触发线程
+p 在浏览器中，定时器是通过 JavaScript 引擎线程来触发的。具体来说，当我们调用 setTimeout 或 setInterval 等定时器函数时，JavaScript 引擎会将相应的定时器任务加入到定时器队列中，并设定相应的定时器时间。然后 JavaScript 引擎线程就会继续执行后面的任务，直到定时器时间到达后，定时器触发线程就会将相应的定时器任务加入到事件队列中，以便 JavaScript 引擎线程在合适的时机执行相应的回调函数。
+p 当定时器任务开始执行时，JavaScript 引擎会将其加入到执行栈中，并将其标记为正在执行。此时，其他的定时器任务和 JavaScript 代码都会被阻塞，直到当前任务执行完毕并从执行栈中弹出。因此，如果定时器任务的执行时间很长，那么其他的定时器任务就会一直被阻塞，直到当前任务执行完成。
+p 需要注意的是，定时器并不是精确的，实际的触发时间可能会因为浏览器性能和系统资源等因素而有所偏差。此外，在浏览器中打开多个标签页或者在后台运行其他应用程序时，定时器也可能会受到影响，因为浏览器或者操作系统可能会将其置于低优先级任务中，以便更好地分配资源。
+p 因此，在使用定时器时，应当尽量避免使用非常精确的时间，而是采用一些容错机制，例如设置一个较小的时间间隔并在回调函数中检查是否达到了预期的条件。
+h4(id="6. http 请求线程") 6. http 请求线程
+p 在浏览器中，HTTP 请求通常是通过浏览器内核的网络请求模块来处理的，也就是说，HTTP 请求并不是在 JavaScript 引擎线程中处理的。具体来说，当我们使用 JavaScript 发起一个 HTTP 请求时，JavaScript 引擎会将相应的请求任务交给浏览器内核的网络请求模块处理。网络请求模块会负责建立网络连接、发送 HTTP 请求、接收服务器响应、处理响应数据等一系列工作，并将最终的结果返回给 JavaScript 引擎线程。
+p HTTP 请求是一种异步操作，也就是说，JavaScript 引擎不会阻塞等待请求结果的返回，而是继续执行后面的任务。当请求结果返回后，网络请求模块会将相应的事件加入到事件队列中，以便 JavaScript 引擎线程在合适的时机执行相应的回调函数。因此，我们可以在 JavaScript 代码中使用回调函数来处理 HTTP 请求结果，以便在结果返回后进行相应的处理操作。
+h4(id="7. 事件队列") 7. 事件队列
+p 浏览器中的事件队列是一种基于事件循环（Event Loop）机制的异步执行机制。当事件发生时，例如鼠标点击、键盘输入等，浏览器会将相应的事件加入到事件队列中，等待 JavaScript 引擎线程空闲时执行相应的事件处理程序。
+p 具体来说，事件队列是由多个任务队列组成的，每个任务队列用于存储一类事件的处理函数。例如，鼠标事件、键盘事件、定时器事件等，每个事件都有对应的任务队列。当事件发生时，相应的任务会被加入到相应的任务队列中。JavaScript 引擎线程在执行任务时，会先从任务队列中取出一个任务执行，执行完成后再从队列中取出下一个任务，直到队列为空为止。
+p 需要一提的是，在浏览器的事件队列中，每个任务队列都有一个优先级。一般来说，浏览器会将用户交互相关的事件（例如鼠标点击、键盘输入等）的任务队列的优先级设置为最高，以确保用户能够尽快地得到响应。其他类型的事件（例如定时器事件、网络请求事件等）的任务队列优先级相对较低，会在用户交互事件的任务队列处理完后才开始执行。
+h4(id="综述") 综述
+p 总的来说，主线程与各个线程的事件队列通信，协调所有的工作。js引擎线程是所有的js执行的地方，所有线程遇到js执行的需求时都要与js的任务队列交互，这也是我们常说的js是单线程的，因为基本所有任务都要在js引擎线程的任务队列里排队。
+
