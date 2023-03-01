@@ -18,7 +18,7 @@ excerpt: 脚本部署太麻烦？试试github actions，免费的自动化流程
 <div class="message-container">
     <div class="bubble-container me">
         <div class="avatar">
-            <img src="/images/avatar.svg" alt="" />
+            <img src="/images/avatar.jpeg" alt="" />
         </div>
         <div class="message">
             <div class="bubble-box">详细介绍下github actions</div>

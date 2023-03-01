@@ -10,7 +10,9 @@ menu:
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
-  友链: /link/ || fas fa-link
+  链接|| fas fa-link:
+    主题支持：Butterfly: https://butterfly.js.org
+    友链: /link/
   关于: /about/ || fas fa-heart
 
 nav:
@@ -91,7 +93,7 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /img/favicon.png
+favicon: /images/avatar.jpeg
 
 # Avatar (頭像)
 avatar:
@@ -105,7 +107,7 @@ disable_top_img: false
 index_img:
 
 # If the banner of page not setting, it will show the top_img
-default_top_img:
+default_top_img: /images/banner/1.png
 
 # The banner image of archive page
 archive_img:
@@ -471,8 +473,7 @@ footer:
         left: -180px;
       }
     </style>
-    <script src="/lib/sakana/sakana.min.js"></script>
-    <script>
+    <script data-pjax>
     if(Sakana){
         Sakana.setMute(true);
         Sakana.init({
@@ -702,7 +703,7 @@ preloader:
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
-  source: 1
+  source: 2
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
 
@@ -939,6 +940,7 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
+    <script src="/lib/sakana/sakana.min.js"></script>
   bottom:
     # - <script src="xxxx"></script>
 

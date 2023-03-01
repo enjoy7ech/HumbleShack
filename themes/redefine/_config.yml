@@ -18,10 +18,10 @@ style:
   video_url: /media/miku.mp4
 
   # Avatar (You can use local image or image external link)
-  avatar: /images/avatar.svg # avatar of the author
+  avatar: /images/avatar.jpeg # avatar of the author
 
   # Favicon (You can use local image or image external link)
-  favicon: /images/avatar.svg # favicon of the site
+  favicon: /images/avatar.jpeg # favicon of the site
 
   # Article image align position
   article_img_align: center # value: left | center
