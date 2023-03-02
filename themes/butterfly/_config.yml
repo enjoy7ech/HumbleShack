@@ -327,9 +327,9 @@ valine:
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: /images/pikachu.png # valine background
-  emojiCDN: "//i0.hdslb.com/bfs/emote/"
   visitor: false
   option:
+    emojiCDN: "//i0.hdslb.com/bfs/emote/"
 
 # waline - A simple comment system with backend support fork from Valine
 # https://waline.js.org/
