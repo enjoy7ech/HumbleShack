@@ -1,10 +1,10 @@
 ---
-title: SVG滤镜-feDisplacementMap
+title: SVG滤镜之feDisplacementMap
 date: 2023-02-19 11:14:36
 tags: [前端,SVG]
 categories: 前端
 keywords: SVG滤镜,feDisplacementMap,菈妮
-description: 用feDisplacementMap实现菈妮的动效海报
+description: 用feDisplacementMap实现菈妮的动效海报，谁会不喜欢会动的老婆呢
 thumbnail: /assets/SVG滤镜-feDisplacementMap/thumbnail/ranni.jpg
 top_img: /assets/SVG滤镜-feDisplacementMap/thumbnail/ranni.jpg
 cover: /assets/SVG滤镜-feDisplacementMap/thumbnail/ranni.jpg
