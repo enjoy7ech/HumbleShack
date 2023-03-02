@@ -21,7 +21,8 @@ excerpt: vscode美化教程之把会动的看板娘集成到vscode，让你的�
 ### 找到vscode的入口文件
 
 electron都有个入口html文件的，就像web服务器都要有个index.html一样。在vscode的菜单栏点击Help->Toggle Developer Tools（中文应该是打开开发人员工具吧），熟悉的devTools就出现了。
-接下来按Ctrl+Shift+p打开命令窗口，输入reload可以看见Developer:Reload Window（中文应该是重启窗口吧），点击重新刷一下vscode，此时看回DevTools的Network，看到第一个请求就是入口文件了。大概是这个样子![2](/assets/live2d-in-vscode/2.png)看到请求的url地址可以看到入口文件在安装目录下的/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html
+接下来按Ctrl+Shift+p打开命令窗口，输入reload可以看见Developer:Reload Window（中文应该是重启窗口吧），点击重新刷一下vscode，此时看回DevTools的Network，看到第一个请求就是入口文件了。大概是这个样子![2](/assets/live2d-in-vscode/2.png)看到请求的url地址可以看到入口文件在安装目录下的
+/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html
 
 ### 魔改入口文件
 
