@@ -13,13 +13,12 @@ menu:
   链接|| fas fa-link:
     主题支持：Butterfly: https://butterfly.js.org
     友链: /link/
-  关于: /about/ || fas fa-heart
+  关于: /about/ || fas fa-id-card
 
 nav:
   logo: # image
   display_title: true
   fixed: false # fixed navigation bar
-  video: /media/miku.mp4
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -104,7 +103,8 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img:
+index_img: false
+index_video: /media/miku.mp4
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: /images/banner/1.png
@@ -322,11 +322,12 @@ gitalk:
 # valine
 # https://valine.js.org
 valine:
-  appId: # leancloud application app id
-  appKey: # leancloud application app key
+  appId: wqGHXO5u2S5TMhdC4v78PuG8-gzGzoHsz # leancloud application app id
+  appKey: ZowSQaHqXE0hkyvxsCdGP1zt # leancloud application app key
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
-  bg: # valine background
+  bg: /images/pikachu.png # valine background
+  emojiCDN: "//i0.hdslb.com/bfs/emote/"
   visitor: false
   option:
 
