@@ -101,5 +101,13 @@ theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: ""
+deploy: # 所有部署器的根配置块
+  - type: rss3
+    endpoint: https://hub.rss3.io # 一个 RSS3 Hub 的链接
+    privateKey: 957088cc2b49a6e6034da14b7a03744fb98c2eec1ceec0fcc49daa131bb4fdb5 # 您的私钥，64字节。
+    ipfs: # ipfs 相关的配置
+      deploy: true # 是否部署到 IPFS
+      gateway: pinata # IPFS API 网关
+      api: # IPFS 网关相关的验证内容
+        key: 74791336243c5c676fe0
+        secret: 2c46a3249a3f4dce9b4fafd55304985ef14abdcd44a4f06fb0f3a4133e80c1d0
