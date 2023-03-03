@@ -44,6 +44,7 @@ copy:
 social:
   fab fa-github: https://github.com/enjoy7ech || Github
   fas fa-envelope: mailto:1248482491@qq.com || Email
+  fas fa-rss: /atom.xml
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
@@ -228,7 +229,7 @@ post_edit:
   enable: true
   # url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/
   # For example: https://github.com/jerryc127/butterfly.js.org/edit/main/source/
-  url: https://github.com/enjoy7ech/HumbleShack/tree/main/source/_posts
+  url: https://github.com/enjoy7ech/HumbleShack/tree/main/source/
 
 # Related Articles
 related_post:
