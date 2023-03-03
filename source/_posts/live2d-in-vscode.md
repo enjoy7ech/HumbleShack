@@ -99,5 +99,6 @@ initL2DWidget(
 ```
 
 纸片人模型到哪找，相信各位路子应该都有。我这里提供一个repo，[https://github.com/Eikanya/Live2d-model](https://github.com/Eikanya/Live2d-model)。然后live2d 3.0的集成我其实也做了，但是这个网页性能着实太低，都影响我撸代码了，这里也就不提供教程了，感兴趣的可以去我的repo里看<span class="shy-block">顺便点个star吧(*^__^*)</span>[https://github.com/enjoy7ech/vscode-live2d-dev/tree/master/live2d_3](https://github.com/enjoy7ech/vscode-live2d-dev/tree/master/live2d_3)。
+有任何问题或者优化需要pr的可以到这个仓库<i class="far fa-hand-point-right"></i>[https://github.com/enjoy7ech/vscode-live2d](https://github.com/enjoy7ech/vscode-live2d)
 
 最后附个修改模型后的截图。![](/assets/live2d-in-vscode/2.gif)
