@@ -918,7 +918,7 @@ pwa:
   apple_touch_icon: /images/icons/icon-180x180.png
   favicon_32_32: images/icons/icon-32x32.png
   favicon_16_16: images/icons/icon-16x16.png
-  mask_icon: false
+  mask_icon: images/icons/icon-512x512.png
 
 # Open graph meta tags
 # https://developers.facebook.com/docs/sharing/webmasters/
