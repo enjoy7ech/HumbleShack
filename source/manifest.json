@@ -4,7 +4,6 @@
     "theme_color": "#49b1f5",
     "background_color": "#49b1f5",
     "display": "standalone",
-    "orientation": "",
     "scope": "/",
     "start_url": "/",
     "icons": [
@@ -46,7 +45,8 @@
       {
         "src": "images/icons/icon-512x512.png",
         "sizes": "512x512",
-        "type": "image/png"
+        "type": "image/png",
+        "purpose": "any maskable"
       }
     ]
   }
