@@ -492,8 +492,6 @@ footer:
         });
     }
     </script>
-    <div id="aplayer"></div>
-    <script src="APlayer.min.js"></script>
 
   copyright: false # Copyright of theme and framework
 
@@ -947,7 +945,15 @@ inject:
     <script src="/lib/aplayer/dist/APlayer.min.js"></script>
     <script src="/lib/sakana/sakana.min.js"></script>
   bottom: |
-    <div id="aplayer" style="text-align: left;"></div>
+    <div id="aplayer"></div>
+    <style>
+      #aplayer{
+        text-align: left;
+      }
+      .aplayer.aplayer-fixed,.aplayer-body{
+        max-width: min(70vw, 400px)!important;
+      }
+    </style>
     <script>
       new APlayer({
           container: document.getElementById('aplayer'),
