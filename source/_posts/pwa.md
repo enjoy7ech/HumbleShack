@@ -19,7 +19,7 @@ PWA（Progressive Web App）是一种在移动设备和桌面浏览器上提供�
 <div class="message-container">
     <div class="bubble-container me">
         <div class="avatar">
-            <img src="/images/avatar.jpeg" alt="" />
+            <img src="/images/avatar.png" alt="" />
         </div>
         <div class="message">
             <div class="bubble-box">PWA简介</div>
