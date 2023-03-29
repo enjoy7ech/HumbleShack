@@ -35,6 +35,7 @@ header#page-header(class=`${isHomeClass+isFixedClass}`, style=bg_img)
   if top_img !== false
     if is_post()
       include ./post-info.pug
+      include ./wave.pug
     else if is_home()
       if theme.index_video
         video(
