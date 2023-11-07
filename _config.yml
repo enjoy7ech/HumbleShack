@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: HUMBLE SHACK
-subtitle: 斯是陋室，惟吾德馨。
-description: 关注前端，认真生活的精致小生的博客
-keywords: 博客,blog,前端,HUMBLESHACK
+title: 林深时见鹿
+subtitle:
+description: 生如夏花之绚烂, 死如秋叶之静美
+keywords: 博客,blog,前端
 author: Wings Denzel
 language: zh-CN
 timezone: "Asia/Shanghai"
