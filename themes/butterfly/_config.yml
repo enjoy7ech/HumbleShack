@@ -960,6 +960,11 @@ inject:
           container: document.getElementById('aplayer'),
           fixed: true,
           audio: [{
+              name: '希望的新一天',
+              artist: 'Gs',
+              url: '/playlist/album/Unknown/希望的新一天/希望的新一天.ogg',
+              cover: '/playlist/album/Unknown/希望的新一天/希望的新一天.webp',
+          },{
               name: 'Like A Star',
               artist: 'Youngso Kim',
               url: '/playlist/album/UTOPIA/Like A Star.mp3',
