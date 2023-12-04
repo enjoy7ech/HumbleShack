@@ -962,7 +962,7 @@ inject:
           audio: [{
               name: '希望的新一天',
               artist: 'Gs',
-              url: '/playlist/album/Unknown/希望的新一天/希望的新一天.ogg',
+              url: '/playlist/album/Unknown/希望的新一天/希望的新一天.mp3',
               cover: '/playlist/album/Unknown/希望的新一天/希望的新一天.webp',
           },{
               name: 'Like A Star',
