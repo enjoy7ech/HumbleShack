@@ -17,5 +17,5 @@ jobs:
         run: yarn
         shell: bash
       - name: rebuild all static resource # 重新build静态资源，供nginx使用
-        run: npx hexo clean && yarn build
+        run: yarn build
         shell: bash
