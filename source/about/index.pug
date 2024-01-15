@@ -4,8 +4,30 @@ date: 2023-02-19 10:56:19
 top_img: /images/banner/2.png
 ---
 
-link(rel="stylesheet", href="/assets/aboutme/style.css")
+link(rel="stylesheet" href="/assets/aboutme/style.css")
 .aboutme-container
+  .spine#spine
+  script(data-pjax).
+    var size = [1200, 1200]
+    new spine.SpinePlayer("spine", {
+      alpha: true,
+      backgroundColor: "#00000000",
+      premultipliedAlpha: false,
+      showControls: false,
+      jsonUrl: "/assets/spine/Uillean/union.json",
+      atlasUrl: "/assets/spine/Uillean/20240_break_Uillean.atlas",
+      viewport: {
+        x: - size[0]/2 - 250,
+        y: -size[1]/2 - 480,
+        width: size[0],
+        height: size[1],
+        padLeft: "0%",
+        padRight: "0%",
+        padTop: "0%",
+        padBottom: "0%",
+        debugRender: false
+      }
+    })
   .content-box
     .content
       .title Wings Denzel
@@ -21,16 +43,17 @@ link(rel="stylesheet", href="/assets/aboutme/style.css")
           .para 弹吉他
           .para JDM
           .para 玩游戏
-  #picture
-    #bg
-    img#top-cloud1(disableLazy, src="/assets/aboutme/top-cloud1.png")
-    img#top-cloud2(disableLazy, src="/assets/aboutme/top-cloud2.png")
-    img#pole(disableLazy, src="/assets/aboutme/pole.png")
-    img#land(disableLazy, src="/assets/aboutme/land.png")
-    img#leaf1(disableLazy, src="/assets/aboutme/leaf1.png")
-    img#cloud1(disableLazy, src="/assets/aboutme/cloud1.png")
-    img#sf1(disableLazy, src="/assets/aboutme/sf1.png")
-    img#sf2(disableLazy, src="/assets/aboutme/sf2.png")
-    img#sf3(disableLazy, src="/assets/aboutme/sf3.png")
 
-script(data-pjax, src="/assets/aboutme/index.js")
+//-   #picture
+//-     #bg
+//-     img#top-cloud1(disableLazy, src="/assets/aboutme/top-cloud1.png")
+//-     img#top-cloud2(disableLazy, src="/assets/aboutme/top-cloud2.png")
+//-     img#pole(disableLazy, src="/assets/aboutme/pole.png")
+//-     img#land(disableLazy, src="/assets/aboutme/land.png")
+//-     img#leaf1(disableLazy, src="/assets/aboutme/leaf1.png")
+//-     img#cloud1(disableLazy, src="/assets/aboutme/cloud1.png")
+//-     img#sf1(disableLazy, src="/assets/aboutme/sf1.png")
+//-     img#sf2(disableLazy, src="/assets/aboutme/sf2.png")
+//-     img#sf3(disableLazy, src="/assets/aboutme/sf3.png")
+
+//- script(data-pjax, src="/assets/aboutme/index.js")

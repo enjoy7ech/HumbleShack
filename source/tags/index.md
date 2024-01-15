@@ -1,5 +1,5 @@
 ---
-title: tags
+title: 标签
 date: 2023-02-19 10:56:19
 type: "tags"
 orderby: random

@@ -945,6 +945,8 @@ inject:
     <link rel="stylesheet" href="/lib/aplayer/dist/APlayer.min.css">
     <script src="/lib/aplayer/dist/APlayer.min.js"></script>
     <script src="/lib/sakana/sakana.min.js"></script>
+    <script src="/lib/spine-player/spine-player.js"></script>
+    <link rel="stylesheet" href="/lib/spine-player/spine-player.css">
   bottom: |
     <div id="aplayer"></div>
     <style>
