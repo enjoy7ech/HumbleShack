@@ -947,6 +947,17 @@ inject:
     <script src="/lib/sakana/sakana.min.js"></script>
     <script src="/lib/spine-player/spine-player.js"></script>
     <link rel="stylesheet" href="/lib/spine-player/spine-player.css">
+    <style>
+      @font-face {
+        font-family: Babylonica;
+        src: url('/fonts/Babylonica-Regular.ttf');
+      }
+
+      @font-face {
+        font-family: GreatVibes;
+        src: url('/fonts/GreatVibes-Regular.ttf');
+      }
+    </style>
   bottom: |
     <div id="aplayer"></div>
     <style>
