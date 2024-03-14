@@ -9,3 +9,4 @@ public/
 _multiconfig.yml
 .posts.json
 link.json
+.npmrc

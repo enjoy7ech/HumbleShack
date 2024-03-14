@@ -119,3 +119,16 @@ feed:
   content:
   content_limit:
   content_limit_delim: " "
+
+math:
+  katex:
+    css: "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    options:
+      throwOnError: false
+  mathjax:
+    css: "https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css"
+    options:
+      conversion:
+        display: false
+      tex:
+      svg:
