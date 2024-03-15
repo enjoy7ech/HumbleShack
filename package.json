@@ -1,6 +1,6 @@
 {
   "name": "humble-shack",
-  "version": "2.3.9",
+  "version": "2.4.0",
   "author": "Wings Denzel",
   "private": true,
   "scripts": {
@@ -23,6 +23,7 @@
     "hexo-generator-index": "^3.0.0",
     "hexo-generator-searchdb": "^1.4.1",
     "hexo-generator-tag": "^2.0.0",
+    "hexo-math": "^4.0.0",
     "hexo-offline": "^2.0.1",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^6.0.0",
@@ -32,6 +33,7 @@
     "hexo-theme-landscape": "^0.0.3",
     "hexo-wordcount": "^6.0.1",
     "prettier": "^2.8.4",
-    "prettier-plugin-stylus": "0.0.1-beta.8"
+    "prettier-plugin-stylus": "0.0.1-beta.8",
+    "yarn": "^1.22.22"
   }
 }

@@ -10,3 +10,5 @@ _multiconfig.yml
 .posts.json
 link.json
 .npmrc
+.yarnrc
+yarn.lock
