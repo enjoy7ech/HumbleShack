@@ -990,7 +990,7 @@ inject:
           }]
       });
     </script>
-    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    <script data-pjax async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
