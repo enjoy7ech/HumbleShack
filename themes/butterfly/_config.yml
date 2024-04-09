@@ -8,6 +8,8 @@ menu:
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
   图库: /gallery/ || fas fa-image
+  REPL|| fas fa-file-code:
+    JupyterLite: https://repl.dongzx.lol/
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
@@ -519,12 +521,12 @@ microsoft_clarity:
 # --------------------------------------
 
 # Google Adsense (谷歌廣告)
-google_adsense:
-  enable: true
-  auto_ads: true
-  js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
-  client: ca-pub-6306241649571633
-  enable_page_level_ads: true
+# google_adsense:
+#   enable: true
+#   auto_ads: true
+#   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
+#   client: ca-pub-6306241649571633
+#   enable_page_level_ads: true
 
 # Insert ads manually (手動插入廣告)
 # ad:

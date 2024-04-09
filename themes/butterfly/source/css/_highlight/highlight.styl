@@ -110,6 +110,14 @@ $code-block
       font-size: 1.15em
       user-select: none
 
+      .repl-button
+        margin-left: 0.4em
+        cursor: pointer
+        transition: color .2s
+
+        &:hover
+          color: $tagsP-green-color
+
     .copy-notice
       position: absolute
       right: 2.4em
@@ -124,6 +132,7 @@ $code-block
 
       &:hover
         color: $theme-color
+
 
   .gutter
     user-select: none
