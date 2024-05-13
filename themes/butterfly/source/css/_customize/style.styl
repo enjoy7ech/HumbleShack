@@ -1,11 +1,19 @@
 .shy-block {
   mix-blend-mode: difference;
   background: #fff !important;
+  margin: 0 0.5em;
   color: #fff !important;
-  padding: 0 0.5em;
+
+  * {
+    color: #fff !important;
+  }
 
   &:hover, &:active {
     color: #000 !important;
+
+    * {
+      color: #000 !important;
+    }
   }
 }
 
@@ -132,7 +140,6 @@
 
 .post-content p {
   // text-indent: 2em;
-
   i {
     text-indent: initial;
   }
