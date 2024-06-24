@@ -318,7 +318,7 @@ print(LCS[m])
 4. 出口条件：i=0 时`只有一个元素时，递增序列就是1`，返回 1。
 
 那递推关系：
-{% katex %}LIS(i)=LIS(j)+1,\;j<i\;and\;nums\lbrack j\rbrack<nums\lbrack i\rbrack{% endkatex %}
+{% katex %}LIS(i)=max(LIS(j)+1),\;j<i\;and\;nums\lbrack j\rbrack<nums\lbrack i\rbrack{% endkatex %}
 
 ### LIS 递归（自顶向下）
 
