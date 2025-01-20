@@ -974,7 +974,18 @@ inject:
       new APlayer({
           container: document.getElementById('aplayer'),
           fixed: true,
-          audio: [{
+          audio: [
+          {
+            name: '礎の花冠',
+            artist: 'Roselia',
+            url: 'https://pan.dongzx.lol/api/v3/file/get/8084/01.%E7%A4%8E%E3%81%AE%E8%8A%B1%E5%86%A0.flac?sign=BT7ZJrX5uSCvya-Sn13cC53ZCSTw4WchAnuAlfaRr14%3D%3A0',
+            cover: 'https://pan.dongzx.lol/api/v3/file/get/8085/COVER.jpg?sign=IapH4c6KDmU0NBc6qTmH9LmMgF5rt00ZWwYKHRWy184%3D%3A0',
+          },{
+              name: 'FRONTIER FANTASIA',
+              artist: 'Roselia',
+              url: 'https://pan.dongzx.lol/api/v3/file/get/8086/02.FRONTIER%20FANTASIA.flac?sign=B64BFzIFiMsAOnuIDJkHWZlFfSKSoKrUvYH_KVU5pWg%3D%3A0',
+              cover: 'https://pan.dongzx.lol/api/v3/file/get/8085/COVER.jpg?sign=IapH4c6KDmU0NBc6qTmH9LmMgF5rt00ZWwYKHRWy184%3D%3A0',
+          },{
               name: '希望的新一天',
               artist: 'Gs',
               url: '/playlist/album/Unknown/希望的新一天/希望的新一天.mp3',
