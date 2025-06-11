@@ -1,6 +1,6 @@
 ---
 title: 序章
-date: 2025-06-06 15:59:26
+date: 2025-06-03 11:19:51
 tags: [小说, AI, 神之天平]
 categories: 用AI整点薯条
 keywords: AI写小说
