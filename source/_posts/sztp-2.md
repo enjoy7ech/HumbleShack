@@ -203,4 +203,4 @@ excerpt: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
 
 奥维德似是想要挽回什么伸出手想要去触碰那光点，微风佛动着发带却飘到了他的手上。“魔物。。。”仇恨带来的愤怒涌上心头，奥维德抓住了发带，下定了决心。
 
-<img src="https://pan.dongzx.lol/api/v3/file/get/8098/dongzx_boy_tied_a_long_white_Cloth_belt_on_his_head._carry_th_4ca25470-6921-4e12-bc19-4401ae790dad_3.png?sign=6o0UdTRya4WlP8u1_xEMJkSIv-SmEmGACXaEuV2fH0U%3D%3A0" />
+<img src=“<https://pan.dongzx.lol/api/v3/file/get/8098/dongzx_boy_tied_a_long_white_Cloth_belt_on_his_head._carry_th_4ca25470-6921-4e12-bc19-4401ae790dad_3.png?sign=6o0UdTRya4WlP8u1_xEMJkSIv-SmEmGACXaEuV2fH0U%3D%3A0“> />
