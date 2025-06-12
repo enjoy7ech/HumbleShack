@@ -294,4 +294,4 @@ excerpt: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
 
 黑魔女回头眨了眨眼：“正式介绍一下，我的魔女名叫爱丘雷尔。“阳光透过彩绘玻璃，在她黑袍上投下斑斓的光斑，仿佛为这个重聚的时刻镀上了温暖的色彩。
 
-<img src=“<https://pan.dongzx.lol/api/v3/file/get/8113/dongzx_Dynamic_action_shot_in_a_bustling_adventurers_guild_tave_99d1d564-5b24-41f5-b03d-f4027e0b92ab.png?sign=Q4xwrKJV7ytxyQbvNqhJVSqYlj2t0Yg9nTzH91Llrls%3D%3A0“> />
+<img src="https://pan.dongzx.lol/api/v3/file/get/8113/dongzx_Dynamic_action_shot_in_a_bustling_adventurers_guild_tave_99d1d564-5b24-41f5-b03d-f4027e0b92ab.png?sign=Q4xwrKJV7ytxyQbvNqhJVSqYlj2t0Yg9nTzH91Llrls%3D%3A0" />
