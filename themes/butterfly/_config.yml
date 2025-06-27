@@ -978,13 +978,13 @@ inject:
           {
             name: '礎の花冠',
             artist: 'Roselia',
-            url: 'https://pan.dongzx.lol/api/v3/file/get/8084/01.%E7%A4%8E%E3%81%AE%E8%8A%B1%E5%86%A0.flac?sign=BT7ZJrX5uSCvya-Sn13cC53ZCSTw4WchAnuAlfaRr14%3D%3A0',
-            cover: 'https://pan.dongzx.lol/api/v3/file/get/8085/COVER.jpg?sign=IapH4c6KDmU0NBc6qTmH9LmMgF5rt00ZWwYKHRWy184%3D%3A0',
+            url: 'https://pan.dongzx.lol/api/v4/file/content/8Rji3/0/01.%E7%A4%8E%E3%81%AE%E8%8A%B1%E5%86%A0.flac?sign=Iq3UqIOAdPTBEcpMfS2qt70kPpFFjUyhgCb2XlttEGk%3D%3A0',
+            cover: 'https://pan.dongzx.lol/api/v4/file/content/02wIl/0/COVER.jpg?sign=oJ_I3VO5pGxRen9hraiMFH0J6okrr_YPztAZiVuPg88%3D%3A0',
           },{
               name: 'FRONTIER FANTASIA',
               artist: 'Roselia',
-              url: 'https://pan.dongzx.lol/api/v3/file/get/8086/02.FRONTIER%20FANTASIA.flac?sign=B64BFzIFiMsAOnuIDJkHWZlFfSKSoKrUvYH_KVU5pWg%3D%3A0',
-              cover: 'https://pan.dongzx.lol/api/v3/file/get/8085/COVER.jpg?sign=IapH4c6KDmU0NBc6qTmH9LmMgF5rt00ZWwYKHRWy184%3D%3A0',
+              url: 'https://pan.dongzx.lol/api/v4/file/content/1AOcz/0/02.FRONTIER%20FANTASIA.flac?sign=FeMGvzjW0BzLTTWhifboBvq485i42Iv51V_S2fAHyok%3D%3A0',
+              cover: 'https://pan.dongzx.lol/api/v4/file/content/02wIl/0/COVER.jpg?sign=oJ_I3VO5pGxRen9hraiMFH0J6okrr_YPztAZiVuPg88%3D%3A0',
           },{
               name: '希望的新一天',
               artist: 'Gs',

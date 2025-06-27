@@ -5,9 +5,9 @@ tags: [小说, AI, 神之天平]
 categories: 用AI整点薯条
 keywords: AI写小说
 description: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
-thumbnail: https://pan.dongzx.lol/api/v3/file/get/8106/u=607798664,716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=_AeWjKAXbcbT1SbJDhxJlgZ_O7-jrh5PpNrh_I7GGw8%3D%3A0
-top_img: https://pan.dongzx.lol/api/v3/file/get/8112/dongzx_3d_--ar_169_--profile_9jtut2c_--oref_httpss.mj.run2cHq7H_c2a2df74-222c-4400-b599-13444e24033f.png?sign=rodoxa2E7Vg8lFV3uZIw4oiHZy7ATO055s58BRVf31E%3D%3A0
-cover: https://pan.dongzx.lol/api/v3/file/get/8106/u=607798664,716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=_AeWjKAXbcbT1SbJDhxJlgZ_O7-jrh5PpNrh_I7GGw8%3D%3A0
+thumbnail: https://pan.dongzx.lol/api/v4/file/content/lKKsg/0/u=607798664%2C716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=N8s-rY77-TSHNBU-qFqF_o2R5f6HfpaV64EwyEGrM80%3D%3A0
+top_img: https://pan.dongzx.lol/api/v4/file/content/VGMC9/0/dongzx_3d_%20-%20ar_169_%20-%20profile_9jtut2c_%20-%20oref_httpss.mj.run2cHq7H_c2a2df74-222c-4400-b599-13444e24033f.png?sign=raPOZosd6s2GHyPLdN_p7McPWiZJQUv7X_ECmjIF0_s%3D%3A0
+cover: https://pan.dongzx.lol/api/v4/file/content/lKKsg/0/u=607798664%2C716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=N8s-rY77-TSHNBU-qFqF_o2R5f6HfpaV64EwyEGrM80%3D%3A0
 excerpt: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
 
 ---
@@ -294,4 +294,4 @@ excerpt: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
 
 黑魔女回头眨了眨眼：“正式介绍一下，我的魔女名叫爱丘雷尔。“阳光透过彩绘玻璃，在她黑袍上投下斑斓的光斑，仿佛为这个重聚的时刻镀上了温暖的色彩。
 
-<img src="https://pan.dongzx.lol/api/v3/file/get/8113/dongzx_Dynamic_action_shot_in_a_bustling_adventurers_guild_tave_99d1d564-5b24-41f5-b03d-f4027e0b92ab.png?sign=Q4xwrKJV7ytxyQbvNqhJVSqYlj2t0Yg9nTzH91Llrls%3D%3A0" />
+<img src="https://pan.dongzx.lol/api/v4/file/content/G2ASJ/0/dongzx_Dynamic_action_shot_in_a_bustling_adventurers_guild_tave_99d1d564-5b24-41f5-b03d-f4027e0b92ab.png?sign=4wpXe6Qdsd3N3sJypJL9xFiNEhZEFO32iBEwyix1IFk%3D%3A0" />

@@ -5,9 +5,9 @@ tags: [算法, 动态规划]
 categories: 算法之路
 keywords: 动态规划,LCS,LIS
 description: 一文全撸二叉树
-thumbnail: https://pan.dongzx.lol/api/v3/file/get/7904/LCS&LIS.png?sign=toaW7QkUCS_xbUOTL8ZbhQn0NN0KM587-yFeDMDPyY8%3D%3A0
-top_img: https://pan.dongzx.lol/api/v3/file/get/7904/LCS&LIS.png?sign=toaW7QkUCS_xbUOTL8ZbhQn0NN0KM587-yFeDMDPyY8%3D%3A0
-cover: https://pan.dongzx.lol/api/v3/file/get/7904/LCS&LIS.png?sign=toaW7QkUCS_xbUOTL8ZbhQn0NN0KM587-yFeDMDPyY8%3D%3A0
+thumbnail: https://pan.dongzx.lol/api/v4/file/content/V3wu9/0/LCS&LIS.png?sign=wVHBsz59tQkdnqbk_KKDre9CSJ03nf9d2EQN6ApMGmo%3D%3A0
+top_img: https://pan.dongzx.lol/api/v4/file/content/V3wu9/0/LCS&LIS.png?sign=wVHBsz59tQkdnqbk_KKDre9CSJ03nf9d2EQN6ApMGmo%3D%3A0
+cover: https://pan.dongzx.lol/api/v4/file/content/V3wu9/0/LCS&LIS.png?sign=wVHBsz59tQkdnqbk_KKDre9CSJ03nf9d2EQN6ApMGmo%3D%3A0
 excerpt: 记录下经典的动态规划问题，最长公共子序列与最长递增子序列问题。
 ---
 

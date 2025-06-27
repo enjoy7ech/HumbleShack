@@ -5,9 +5,9 @@ tags: [小说, AI, 神之天平]
 categories: 用AI整点薯条
 keywords: AI写小说
 description: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
-thumbnail: https://pan.dongzx.lol/api/v3/file/get/8106/u=607798664,716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=_AeWjKAXbcbT1SbJDhxJlgZ_O7-jrh5PpNrh_I7GGw8%3D%3A0
-top_img: https://pan.dongzx.lol/api/v3/file/get/8115/0_3.png?sign=xwxUOU5394y2rtbTUWLjvDPG1FBgC6XGw7TC_rp7JJE%3D%3A0
-cover: https://pan.dongzx.lol/api/v3/file/get/8106/u=607798664,716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=_AeWjKAXbcbT1SbJDhxJlgZ_O7-jrh5PpNrh_I7GGw8%3D%3A0
+thumbnail: https://pan.dongzx.lol/api/v4/file/content/lKKsg/0/u=607798664%2C716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=N8s-rY77-TSHNBU-qFqF_o2R5f6HfpaV64EwyEGrM80%3D%3A0
+top_img: https://pan.dongzx.lol/api/v4/file/content/8y2I3/0/compre_0_3.png?sign=vXfXqvkjUD-zahPM26hIRruesO4XVO-myHW2Sqk5kx8%3D%3A0
+cover: https://pan.dongzx.lol/api/v4/file/content/lKKsg/0/u=607798664%2C716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=N8s-rY77-TSHNBU-qFqF_o2R5f6HfpaV64EwyEGrM80%3D%3A0
 excerpt: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
 
 ---
@@ -553,4 +553,4 @@ excerpt: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
 
 远处的海平线上，朝阳正驱散最后的阴霾。
 
-<img src="https://pan.dongzx.lol/api/v3/file/get/8116/0_4.png?sign=asoT136fBrFBcgwqb9QRz1YH_y7yoRceD4uJNtnrSYA%3D%3A0" />
+<img src="https://pan.dongzx.lol/api/v4/file/content/0PWsl/0/compre_0_4.png?sign=GUDRMcRD16f2rOR9boUrPBGw6T5-sriNaDfLKF8F4Mk%3D%3A0" />

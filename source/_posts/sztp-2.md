@@ -5,9 +5,9 @@ tags: [小说, AI, 神之天平]
 categories: 用AI整点薯条
 keywords: AI写小说
 description: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
-thumbnail: https://pan.dongzx.lol/api/v3/file/get/8106/u=607798664,716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=_AeWjKAXbcbT1SbJDhxJlgZ_O7-jrh5PpNrh_I7GGw8%3D%3A0
-top_img: https://pan.dongzx.lol/api/v3/file/get/8104/dongzx_boy_tied_a_long_white_Cloth_belt_on_his_head._carry_th_a2fda699-5b30-409e-9418-f174fbaff346_2.png?sign=PTtQ00JQOtzyb5L6BspupAZbnsRfZNvGNeqfNyV72LE%3D%3A0
-cover: https://pan.dongzx.lol/api/v3/file/get/8106/u=607798664,716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=_AeWjKAXbcbT1SbJDhxJlgZ_O7-jrh5PpNrh_I7GGw8%3D%3A0
+thumbnail: https://pan.dongzx.lol/api/v4/file/content/lKKsg/0/u=607798664%2C716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=N8s-rY77-TSHNBU-qFqF_o2R5f6HfpaV64EwyEGrM80%3D%3A0
+top_img: https://pan.dongzx.lol/api/v4/file/content/BGeh2/0/dongzx_boy_tied_a_long_white_Cloth_belt_on_his_head._carry_th_a2fda699-5b30-409e-9418-f174fbaff346_2.png?sign=8sirt3m7iGbHoZxIv_P65COwwAURzZMT1aoXXgY-AVk%3D%3A0
+cover: https://pan.dongzx.lol/api/v4/file/content/lKKsg/0/u=607798664%2C716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=N8s-rY77-TSHNBU-qFqF_o2R5f6HfpaV64EwyEGrM80%3D%3A0
 excerpt: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
 
 ---
@@ -203,4 +203,4 @@ excerpt: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
 
 奥维德似是想要挽回什么伸出手想要去触碰那光点，微风佛动着发带却飘到了他的手上。“魔物。。。”仇恨带来的愤怒涌上心头，奥维德抓住了发带，下定了决心。
 
-<img src="https://pan.dongzx.lol/api/v3/file/get/8098/dongzx_boy_tied_a_long_white_Cloth_belt_on_his_head._carry_th_4ca25470-6921-4e12-bc19-4401ae790dad_3.png?sign=6o0UdTRya4WlP8u1_xEMJkSIv-SmEmGACXaEuV2fH0U%3D%3A0" />
+<img src="https://pan.dongzx.lol/api/v4/file/content/VVpF9/0/dongzx_boy_tied_a_long_white_Cloth_belt_on_his_head._carry_th_4ca25470-6921-4e12-bc19-4401ae790dad_3.png?sign=CSAwe3WbqYcj4vGwME5x-FxoFP7_5GHV5Bymo7_62SE%3D%3A0" />

@@ -5,9 +5,9 @@ tags: [小说, AI, 神之天平]
 categories: 用AI整点薯条
 keywords: AI写小说
 description: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
-thumbnail: https://pan.dongzx.lol/api/v3/file/get/8106/u=607798664,716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=_AeWjKAXbcbT1SbJDhxJlgZ_O7-jrh5PpNrh_I7GGw8%3D%3A0
-top_img: https://pan.dongzx.lol/api/v3/file/get/8103/dongzx__--ar_10843_--profile_9jtut2c_--v_7_f531d197-a0f7-43f6-bd74-735ad8540016_0.png?sign=wHylPzVwQPwCE1BcfvgW8_-OLDqW-qanLp83r4cKgrc%3D%3A0
-cover: https://pan.dongzx.lol/api/v3/file/get/8106/u=607798664,716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=_AeWjKAXbcbT1SbJDhxJlgZ_O7-jrh5PpNrh_I7GGw8%3D%3A0
+thumbnail: https://pan.dongzx.lol/api/v4/file/content/lKKsg/0/u=607798664%2C716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=N8s-rY77-TSHNBU-qFqF_o2R5f6HfpaV64EwyEGrM80%3D%3A0
+top_img: https://pan.dongzx.lol/api/v4/file/content/PMVf0/0/dongzx__--ar_10843_--profile_9jtut2c_--v_7_f531d197-a0f7-43f6-bd74-735ad8540016_0.png?sign=ANyhQlN_spof7W8z49_6y8QbdARMB1k7g-MiGT-Theo%3D%3A0
+cover: https://pan.dongzx.lol/api/v4/file/content/lKKsg/0/u=607798664%2C716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=N8s-rY77-TSHNBU-qFqF_o2R5f6HfpaV64EwyEGrM80%3D%3A0
 excerpt: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
 
 ---
@@ -65,4 +65,4 @@ excerpt: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
 
 “我必须找到她。”他低声说，一边将发带轻轻地系在头上。
 
-<img src="https://pan.dongzx.lol/api/v3/file/get/8099/dongzx__--ar_34_--profile_9jtut2c_--oref_httpss.mj.runEex7pno_1ed058c7-0800-449e-9602-f91ab7852a5f_3.png?sign=km5VqV-S7Fv6saLKt8FXaaMuF1tvPWThrdU-_9GJ8Z4%3D%3A0" />
+<img src="https://pan.dongzx.lol/api/v4/file/content/GX5HJ/0/dongzx__--ar_34_--profile_9jtut2c_--oref_httpss.mj.runEex7pno_1ed058c7-0800-449e-9602-f91ab7852a5f_3.png?sign=QYuDfE7VCUSrtEyUm1zxTilaz3TPOCEwW8nH-Fg870o%3D%3A0" />

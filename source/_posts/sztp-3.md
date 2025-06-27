@@ -5,9 +5,9 @@ tags: [小说, AI, 神之天平]
 categories: 用AI整点薯条
 keywords: AI写小说
 description: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
-thumbnail: https://pan.dongzx.lol/api/v3/file/get/8106/u=607798664,716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=_AeWjKAXbcbT1SbJDhxJlgZ_O7-jrh5PpNrh_I7GGw8%3D%3A0
-top_img: https://pan.dongzx.lol/api/v3/file/get/8105/dongzx_3d_render_--ar_5023_--profile_9jtut2c_--v_7_81dd8c6c-5332-412f-8ca3-16bc795e9cd1_3.png?sign=gbKmazwQK0u1hZuFCUEpGPk2fm2tPBubXdJGP8lBeUA%3D%3A0
-cover: https://pan.dongzx.lol/api/v3/file/get/8106/u=607798664,716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=_AeWjKAXbcbT1SbJDhxJlgZ_O7-jrh5PpNrh_I7GGw8%3D%3A0
+thumbnail: https://pan.dongzx.lol/api/v4/file/content/lKKsg/0/u=607798664%2C716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=N8s-rY77-TSHNBU-qFqF_o2R5f6HfpaV64EwyEGrM80%3D%3A0
+top_img: https://pan.dongzx.lol/api/v4/file/content/3V3IA/0/dongzx_3d_render_--ar_5023_--profile_9jtut2c_--v_7_81dd8c6c-5332-412f-8ca3-16bc795e9cd1_3.png?sign=TZuR1Fwt4Q-7NpdSD72wbQoVONlgGgLuDPdvkFIpz0o%3D%3A0
+cover: https://pan.dongzx.lol/api/v4/file/content/lKKsg/0/u=607798664%2C716736394&fm=253&fmt=auto&app=120&f=JPEG.webp?sign=N8s-rY77-TSHNBU-qFqF_o2R5f6HfpaV64EwyEGrM80%3D%3A0
 excerpt: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
 
 ---
@@ -91,7 +91,7 @@ excerpt: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
 
 话音刚落，弥露的眼中立刻迸发出惊人的光彩。她一把抓过桌上的铃铛用力摇晃，清脆的铃声瞬间压过了大厅的嘈杂。
 
-<img src="https://pan.dongzx.lol/api/v3/file/get/8107/dongzx__--ar_23_--profile_9jtut2c_--oref_httpss.mj.run_RGPpw1_1cdd4f85-15d3-4b0b-af20-7c153d41cb09_3.png?sign=eh7BPU-de_-mi8NGfKN7MigOlpjlEosS7IwSaLWp4hQ%3D%3A0" />
+<img src="https://pan.dongzx.lol/api/v4/file/content/JxJs7/0/dongzx__--ar_23_--profile_9jtut2c_--oref_httpss.mj.run_RGPpw1_1cdd4f85-15d3-4b0b-af20-7c153d41cb09_3.png?sign=WD0cJHlpwq8eOwu6hrYHx_dpfVm_zcM-Ekdhvi99t8w%3D%3A0" />
 
 工会将奥维德安置在附近的一间小木屋，他翻遍了工会的档案，才意识到这个世界早已魔物横行，被摧毁的村庄多如繁星。仅凭“阿努莉斯“这个名字和模糊的外貌描述，在无数相似的悲剧中寻找线索，简直如同大海捞针。
 
@@ -277,4 +277,4 @@ excerpt: 用AI整点薯条，今天来霍霍JRPG佳品之神之天平
 
 唯有奥维德知道，在某个被改写的时间长河里，曾有一条伤痕累累的狗，被冲到了无人知晓的岸边，永远的搁浅。
 
-<img src="https://pan.dongzx.lol/api/v3/file/get/8108/dongzx_a_wolf-like_dog_a_Soul_Body_human_stand_behind_the_dog_e3453d5a-6757-4cee-92ec-ff3c3eed0f93_1.png?sign=wRhkJHcxSmJBIDFlUK2_9KMSOCUBX66KFmTSeG74kxQ%3D%3A0" />
+<img src="https://pan.dongzx.lol/api/v4/file/content/ejJu0/0/dongzx_a_wolf-like_dog_a_Soul_Body_human_stand_behind_the_dog_e3453d5a-6757-4cee-92ec-ff3c3eed0f93_1.png?sign=Lx0e2R6HvkY9rMJ0NuOLOfzH0l6ntio2Xc_1r8gYs5g%3D%3A0" />
