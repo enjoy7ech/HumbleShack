@@ -1,6 +1,6 @@
 ---
 title: SVG滤镜之feDisplacementMap
-date: 2023-02-19 11:14:36
+date: 2022-02-19 11:14:36
 tags: [前端,SVG]
 categories: 前端
 keywords: SVG滤镜,feDisplacementMap,菈妮
@@ -38,6 +38,7 @@ feDisplacementMap 可以使用 in 属性来指定源图像输入和 in2 属性�
 
 feDisplacementMap对图形进行位置计算有一个映射公式。
 公式如下（摘自MDN文档）：
+
 ```
 P'(x,y) ← P( x + scale * (XC(x,y) - 0.5), y + scale * (YC(x,y) - 0.5))
 
@@ -50,6 +51,7 @@ P'(x,y) ← P( x + scale * (XC(x,y) - 0.5), y + scale * (YC(x,y) - 0.5))
 ```
 
 下面是一个 feDisplacementMap 的示例：
+
 ``` html
 <svg width="300" height="300">
   <filter id="displacement">
@@ -59,6 +61,7 @@ P'(x,y) ← P( x + scale * (XC(x,y) - 0.5), y + scale * (YC(x,y) - 0.5))
   <circle cx="150" cy="150" r="100" fill="#FFC107" filter="url(#displacement)" />
 </svg>
 ```
+
 在上面的示例中，feTurbulence 用于创建一张噪声图像，它作为位移图像传递给了 feDisplacementMap。 scale 属性设置为 20，表示扭曲的强度，而 xChannelSelector 和 yChannelSelector 属性则分别设置为 R 和 G，表示使用位移图像的红色和绿色通道进行水平和垂直位移。最后，我们将 filter 应用于一个圆形，以展示 feDisplacementMap 的效果。
 
 总体来说，feDisplacementMap 是一个非常有用的 SVG 滤镜特效，它可以创建各种视觉效果，如水波纹、地形图等。它需要使用两张图像，其中一张作为源图像，另一张作为位移图像，用于扭曲源图像的形状。通过调整不同的属性，可以实现不同的扭曲效果。
@@ -68,15 +71,18 @@ P'(x,y) ← P( x + scale * (XC(x,y) - 0.5), y + scale * (YC(x,y) - 0.5))
 </div>
 
 扣完素材，开始实战，顺便讲解一下这个滤镜的计算逻辑。
+
 ### 1. 先实现眨眼
+
 为了省却定位的操作，所有用于位移的遮罩全都和原图的尺寸一致。第一个眨眼的遮罩长这样，由于眨眼是需要两侧的闭合速度小于中间，
 <img src="/assets/SVG滤镜-feDisplacementMap/assets/masks/eye-displaymap.png" width="100%"/>
 x通道使用的G，y通道使用的B，由于只需要用两个通道，所以R设置任意的无所谓。由于rgb的值取中间值127为不位移（可见公式中-0.5），小于127往正向偏移（右下）。因此第一步就是从正中间斜向拉一条渐变线（用眼睛中间到两侧），渐变值从中间（127，84，33）往两侧（127，99，77），可见这个幅度是越来越小（与127的间隔越来越小），由于眼球右侧眼睑更多，这个渐变过度可以再平滑一点，显得更自然。
 
 ### 2. 实现身体抖动 <span class="shy-block">谁呼吸这么大动静233</span>
+
 帽子和身体的一些常规二维transform，加上一些细节rotate变换。
 
-### 3. 调一下细节，完成！
+### 3. 调一下细节，完成
 
 <svg style="width: 100%; height: 100%" viewBox="0 0 1920 760">
     <g>
@@ -115,7 +121,7 @@ x通道使用的G，y通道使用的B，由于只需要用两个通道，所以R
 
 ## 后记
 
-公式 P'(x,y) ← P( x + scale * (XC(x,y) - 0.5), y + scale * (YC(x,y) - 0.5))可以看出原图的每个点与位移后的点应该是一一对应的，但是见下图，（截图来自[深入理解SVG feDisplacementMap滤镜及实际应用](https://www.zhangxinxu.com/wordpress/2017/12/understand-svg-fedisplacementmap-filter/)）
+公式 P'(x,y) ← P( x + scale *(XC(x,y) - 0.5), y + scale* (YC(x,y) - 0.5))可以看出原图的每个点与位移后的点应该是一一对应的，但是见下图，（截图来自[深入理解SVG feDisplacementMap滤镜及实际应用](https://www.zhangxinxu.com/wordpress/2017/12/understand-svg-fedisplacementmap-filter/)）
 
 ![截图](/assets/SVG滤镜-feDisplacementMap/test1.png)
 

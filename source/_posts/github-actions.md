@@ -1,6 +1,6 @@
 ---
 title: 自动化方案之Github Actions
-date: 2023-02-20 11:14:36
+date: 2022-02-20 11:14:36
 tags: 
  - github-actions
 categories: 自动化

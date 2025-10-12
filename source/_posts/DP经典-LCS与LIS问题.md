@@ -1,6 +1,6 @@
 ---
 title: DP经典-LCS与LIS问题
-date: 2024-04-03 17:11:43
+date: 2022-04-03 17:11:43
 tags: [算法, 动态规划]
 categories: 算法之路
 keywords: 动态规划,LCS,LIS
