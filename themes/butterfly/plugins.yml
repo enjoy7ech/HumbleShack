@@ -39,12 +39,12 @@ twikoo:
   file: dist/twikoo.all.min.js
   version: 1.6.10
 waline_js:
-  name: '@waline/client'
+  name: "@waline/client"
   file: dist/waline.js
   other_name: waline
   version: 2.14.7
 waline_css:
-  name: '@waline/client'
+  name: "@waline/client"
   file: dist/waline.css
   other_name: waline
   version: 2.14.7
@@ -119,12 +119,12 @@ pangu:
   file: dist/browser/pangu.min.js
   version: 4.0.7
 fancybox_css_v4:
-  name: '@fancyapps/ui'
+  name: "@fancyapps/ui"
   file: dist/fancybox.css
   version: 4.0.31
   other_name: fancyapps-ui
 fancybox_v4:
-  name: '@fancyapps/ui'
+  name: "@fancyapps/ui"
   file: dist/fancybox.umd.js
   version: 4.0.31
   other_name: fancyapps-ui
@@ -141,7 +141,7 @@ snackbar:
   file: dist/snackbar.min.js
   version: 0.1.16
 fontawesomeV6:
-  name: '@fortawesome/fontawesome-free'
+  name: "@fortawesome/fontawesome-free@6.3.0"
   file: css/all.min.css
   other_name: font-awesome
   version: 6.3.0
@@ -199,12 +199,12 @@ pace_default_css:
   file: themes/blue/pace-theme-minimal.css
   version: 1.2.4
 docsearch_js:
-  name: '@docsearch/js'
+  name: "@docsearch/js"
   other_name: docsearch-js
   file: dist/umd/index.js
   version: 3.3.3
 docsearch_css:
-  name: '@docsearch/css'
+  name: "@docsearch/css"
   other_name: docsearch-css
   file: dist/style.css
   version: 3.3.3
